@@ -1,0 +1,786 @@
+
+==================== Tidy Core ====================
+2017-09-13 23:36:40.8606438 UTC
+
+Result size of Tidy Core
+  = {terms: 715, types: 976, coercions: 8, joins: 0/1}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ounzip.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ounzip.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ounzip.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Ounzip.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Ounzip.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ounzip.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ounzip.$trModule2 = "CoreDump.Tensor.Ounzip"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ounzip.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Ounzip.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Ounzip.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ounzip.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Ounzip.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Ounzip.$trModule3 CoreDump.Tensor.Ounzip.$trModule1
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl :: GHC.Prim.Addr#
+lvl = "error"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl1 :: [Char]
+lvl1 = GHC.CString.unpackCString# lvl
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl2 :: GHC.Prim.Addr#
+lvl2 = "static-tensor-0.1.0.0-1bgjq3JOZMoDpQl5pqUrpL"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl3 :: [Char]
+lvl3 = GHC.CString.unpackCString# lvl2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl4 :: GHC.Prim.Addr#
+lvl4 = "Data.List.Unrolled"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl5 :: [Char]
+lvl5 = GHC.CString.unpackCString# lvl4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl6 :: GHC.Prim.Addr#
+lvl6 = "src\\Data\\List\\Unrolled.hs"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl7 :: [Char]
+lvl7 = GHC.CString.unpackCString# lvl6
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl8 :: Int
+lvl8 = GHC.Types.I# 185#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl9 :: Int
+lvl9 = GHC.Types.I# 22#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl10 :: Int
+lvl10 = GHC.Types.I# 69#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl11 :: GHC.Stack.Types.SrcLoc
+lvl11 = GHC.Stack.Types.SrcLoc lvl3 lvl5 lvl7 lvl8 lvl9 lvl8 lvl10
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl12 :: GHC.Stack.Types.CallStack
+lvl12
+  = GHC.Stack.Types.PushCallStack
+      lvl1 lvl11 GHC.Stack.Types.EmptyCallStack
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl13 :: GHC.Prim.Addr#
+lvl13 = "unzip: Not enough elements in the list."#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl14 :: [Char]
+lvl14 = GHC.CString.unpackCString# lvl13
+
+-- RHS size: {terms: 3, types: 6, coercions: 4, joins: 0/0}
+lvl15 :: ([Float], [Float])
+lvl15
+  = error
+      @ 'GHC.Types.LiftedRep
+      @ ([Float], [Float])
+      (lvl12 `cast` <Co:4>)
+      lvl14
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl16 :: [Char]
+lvl16
+  = GHC.CString.unpackCString# CoreDump.Tensor.Ounzip.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl17 :: GHC.Prim.Addr#
+lvl17 = "TensorInstances"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl18 :: [Char]
+lvl18 = GHC.CString.unpackCString# lvl17
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl19 :: GHC.Prim.Addr#
+lvl19 = "tests\\TensorInstances.hs"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl20 :: [Char]
+lvl20 = GHC.CString.unpackCString# lvl19
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl21 :: Int
+lvl21 = GHC.Types.I# 40#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl22 :: Int
+lvl22 = GHC.Types.I# 3#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl23 :: Int
+lvl23 = GHC.Types.I# 51#
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+lvl24 :: GHC.Stack.Types.SrcLoc
+lvl24
+  = GHC.Stack.Types.SrcLoc lvl16 lvl18 lvl20 lvl21 lvl22 lvl21 lvl23
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+lvl25 :: GHC.Stack.Types.CallStack
+lvl25
+  = GHC.Stack.Types.PushCallStack
+      lvl1 lvl24 GHC.Stack.Types.EmptyCallStack
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl26 :: GHC.Prim.Addr#
+lvl26 = "Not enough elements to build a Tensor of shape [2,3,4]"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl27 :: [Char]
+lvl27 = GHC.CString.unpackCString# lvl26
+
+-- RHS size: {terms: 4, types: 15, coercions: 4, joins: 0/0}
+fail20 :: GHC.Prim.Void# -> Tensor '[2, 3, 4] Float
+fail20
+  = \ _ ->
+      error
+        @ 'GHC.Types.LiftedRep
+        @ (Tensor '[2, 3, 4] Float)
+        (lvl25 `cast` <Co:4>)
+        lvl27
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl28 :: Tensor '[2, 3, 4] Float
+lvl28 = fail20 GHC.Prim.void#
+
+-- RHS size: {terms: 590, types: 733, coercions: 0, joins: 0/1}
+CoreDump.Tensor.Ounzip.$wounzip_
+  :: [(Float, Float)]
+     -> (# Tensor '[2, 3, 4] Float, Tensor '[2, 3, 4] Float #)
+CoreDump.Tensor.Ounzip.$wounzip_
+  = \ (w :: [(Float, Float)]) ->
+      let {
+        ds :: ([Float], [Float])
+        ds
+          = case w of {
+              [] -> lvl15;
+              : x xs ->
+                case x of { (a1, b1) ->
+                case xs of {
+                  [] -> lvl15;
+                  : x1 xs1 ->
+                    case x1 of { (a2, b2) ->
+                    case xs1 of {
+                      [] -> lvl15;
+                      : x2 xs2 ->
+                        case x2 of { (a3, b3) ->
+                        case xs2 of {
+                          [] -> lvl15;
+                          : x3 xs3 ->
+                            case x3 of { (a4, b4) ->
+                            case xs3 of {
+                              [] -> lvl15;
+                              : x4 xs4 ->
+                                case x4 of { (a5, b5) ->
+                                case xs4 of {
+                                  [] -> lvl15;
+                                  : x5 xs5 ->
+                                    case x5 of { (a6, b6) ->
+                                    case xs5 of {
+                                      [] -> lvl15;
+                                      : x6 xs6 ->
+                                        case x6 of { (a7, b7) ->
+                                        case xs6 of {
+                                          [] -> lvl15;
+                                          : x7 xs7 ->
+                                            case x7 of { (a8, b8) ->
+                                            case xs7 of {
+                                              [] -> lvl15;
+                                              : x8 xs8 ->
+                                                case x8 of { (a9, b9) ->
+                                                case xs8 of {
+                                                  [] -> lvl15;
+                                                  : x9 xs9 ->
+                                                    case x9 of { (a10, b10) ->
+                                                    case xs9 of {
+                                                      [] -> lvl15;
+                                                      : x10 xs10 ->
+                                                        case x10 of { (a11, b11) ->
+                                                        case xs10 of {
+                                                          [] -> lvl15;
+                                                          : x11 xs11 ->
+                                                            case x11 of { (a12, b12) ->
+                                                            case xs11 of {
+                                                              [] -> lvl15;
+                                                              : x12 xs12 ->
+                                                                case x12 of { (a13, b13) ->
+                                                                case xs12 of {
+                                                                  [] -> lvl15;
+                                                                  : x13 xs13 ->
+                                                                    case x13 of { (a14, b14) ->
+                                                                    case xs13 of {
+                                                                      [] -> lvl15;
+                                                                      : x14 xs14 ->
+                                                                        case x14 of { (a15, b15) ->
+                                                                        case xs14 of {
+                                                                          [] -> lvl15;
+                                                                          : x15 xs15 ->
+                                                                            case x15 of
+                                                                            { (a16, b16) ->
+                                                                            case xs15 of {
+                                                                              [] -> lvl15;
+                                                                              : x16 xs16 ->
+                                                                                case x16 of
+                                                                                { (a17, b17) ->
+                                                                                case xs16 of {
+                                                                                  [] -> lvl15;
+                                                                                  : x17 xs17 ->
+                                                                                    case x17 of
+                                                                                    { (a18, b18) ->
+                                                                                    case xs17 of {
+                                                                                      [] -> lvl15;
+                                                                                      : x18 xs18 ->
+                                                                                        case x18 of
+                                                                                        { (a19,
+                                                                                           b19) ->
+                                                                                        case xs18
+                                                                                        of {
+                                                                                          [] ->
+                                                                                            lvl15;
+                                                                                          : x19
+                                                                                            xs19 ->
+                                                                                            case x19
+                                                                                            of
+                                                                                            { (a20,
+                                                                                               b20) ->
+                                                                                            case xs19
+                                                                                            of {
+                                                                                              [] ->
+                                                                                                lvl15;
+                                                                                              : x20
+                                                                                                xs20 ->
+                                                                                                case x20
+                                                                                                of
+                                                                                                { (a21,
+                                                                                                   b21) ->
+                                                                                                case xs20
+                                                                                                of {
+                                                                                                  [] ->
+                                                                                                    lvl15;
+                                                                                                  : x21
+                                                                                                    xs21 ->
+                                                                                                    case x21
+                                                                                                    of
+                                                                                                    { (a22,
+                                                                                                       b22) ->
+                                                                                                    case xs21
+                                                                                                    of {
+                                                                                                      [] ->
+                                                                                                        lvl15;
+                                                                                                      : x22
+                                                                                                        xs22 ->
+                                                                                                        case x22
+                                                                                                        of
+                                                                                                        { (a23,
+                                                                                                           b23) ->
+                                                                                                        case xs22
+                                                                                                        of {
+                                                                                                          [] ->
+                                                                                                            lvl15;
+                                                                                                          : x23
+                                                                                                            xs23 ->
+                                                                                                            case x23
+                                                                                                            of
+                                                                                                            { (a24,
+                                                                                                               b24) ->
+                                                                                                            (GHC.Types.:
+                                                                                                               @ Float
+                                                                                                               a1
+                                                                                                               (GHC.Types.:
+                                                                                                                  @ Float
+                                                                                                                  a2
+                                                                                                                  (GHC.Types.:
+                                                                                                                     @ Float
+                                                                                                                     a3
+                                                                                                                     (GHC.Types.:
+                                                                                                                        @ Float
+                                                                                                                        a4
+                                                                                                                        (GHC.Types.:
+                                                                                                                           @ Float
+                                                                                                                           a5
+                                                                                                                           (GHC.Types.:
+                                                                                                                              @ Float
+                                                                                                                              a6
+                                                                                                                              (GHC.Types.:
+                                                                                                                                 @ Float
+                                                                                                                                 a7
+                                                                                                                                 (GHC.Types.:
+                                                                                                                                    @ Float
+                                                                                                                                    a8
+                                                                                                                                    (GHC.Types.:
+                                                                                                                                       @ Float
+                                                                                                                                       a9
+                                                                                                                                       (GHC.Types.:
+                                                                                                                                          @ Float
+                                                                                                                                          a10
+                                                                                                                                          (GHC.Types.:
+                                                                                                                                             @ Float
+                                                                                                                                             a11
+                                                                                                                                             (GHC.Types.:
+                                                                                                                                                @ Float
+                                                                                                                                                a12
+                                                                                                                                                (GHC.Types.:
+                                                                                                                                                   @ Float
+                                                                                                                                                   a13
+                                                                                                                                                   (GHC.Types.:
+                                                                                                                                                      @ Float
+                                                                                                                                                      a14
+                                                                                                                                                      (GHC.Types.:
+                                                                                                                                                         @ Float
+                                                                                                                                                         a15
+                                                                                                                                                         (GHC.Types.:
+                                                                                                                                                            @ Float
+                                                                                                                                                            a16
+                                                                                                                                                            (GHC.Types.:
+                                                                                                                                                               @ Float
+                                                                                                                                                               a17
+                                                                                                                                                               (GHC.Types.:
+                                                                                                                                                                  @ Float
+                                                                                                                                                                  a18
+                                                                                                                                                                  (GHC.Types.:
+                                                                                                                                                                     @ Float
+                                                                                                                                                                     a19
+                                                                                                                                                                     (GHC.Types.:
+                                                                                                                                                                        @ Float
+                                                                                                                                                                        a20
+                                                                                                                                                                        (GHC.Types.:
+                                                                                                                                                                           @ Float
+                                                                                                                                                                           a21
+                                                                                                                                                                           (GHC.Types.:
+                                                                                                                                                                              @ Float
+                                                                                                                                                                              a22
+                                                                                                                                                                              (GHC.Types.:
+                                                                                                                                                                                 @ Float
+                                                                                                                                                                                 a23
+                                                                                                                                                                                 (GHC.Types.:
+                                                                                                                                                                                    @ Float
+                                                                                                                                                                                    a24
+                                                                                                                                                                                    (GHC.Types.[]
+                                                                                                                                                                                       @ Float)))))))))))))))))))))))),
+                                                                                                             GHC.Types.:
+                                                                                                               @ Float
+                                                                                                               b1
+                                                                                                               (GHC.Types.:
+                                                                                                                  @ Float
+                                                                                                                  b2
+                                                                                                                  (GHC.Types.:
+                                                                                                                     @ Float
+                                                                                                                     b3
+                                                                                                                     (GHC.Types.:
+                                                                                                                        @ Float
+                                                                                                                        b4
+                                                                                                                        (GHC.Types.:
+                                                                                                                           @ Float
+                                                                                                                           b5
+                                                                                                                           (GHC.Types.:
+                                                                                                                              @ Float
+                                                                                                                              b6
+                                                                                                                              (GHC.Types.:
+                                                                                                                                 @ Float
+                                                                                                                                 b7
+                                                                                                                                 (GHC.Types.:
+                                                                                                                                    @ Float
+                                                                                                                                    b8
+                                                                                                                                    (GHC.Types.:
+                                                                                                                                       @ Float
+                                                                                                                                       b9
+                                                                                                                                       (GHC.Types.:
+                                                                                                                                          @ Float
+                                                                                                                                          b10
+                                                                                                                                          (GHC.Types.:
+                                                                                                                                             @ Float
+                                                                                                                                             b11
+                                                                                                                                             (GHC.Types.:
+                                                                                                                                                @ Float
+                                                                                                                                                b12
+                                                                                                                                                (GHC.Types.:
+                                                                                                                                                   @ Float
+                                                                                                                                                   b13
+                                                                                                                                                   (GHC.Types.:
+                                                                                                                                                      @ Float
+                                                                                                                                                      b14
+                                                                                                                                                      (GHC.Types.:
+                                                                                                                                                         @ Float
+                                                                                                                                                         b15
+                                                                                                                                                         (GHC.Types.:
+                                                                                                                                                            @ Float
+                                                                                                                                                            b16
+                                                                                                                                                            (GHC.Types.:
+                                                                                                                                                               @ Float
+                                                                                                                                                               b17
+                                                                                                                                                               (GHC.Types.:
+                                                                                                                                                                  @ Float
+                                                                                                                                                                  b18
+                                                                                                                                                                  (GHC.Types.:
+                                                                                                                                                                     @ Float
+                                                                                                                                                                     b19
+                                                                                                                                                                     (GHC.Types.:
+                                                                                                                                                                        @ Float
+                                                                                                                                                                        b20
+                                                                                                                                                                        (GHC.Types.:
+                                                                                                                                                                           @ Float
+                                                                                                                                                                           b21
+                                                                                                                                                                           (GHC.Types.:
+                                                                                                                                                                              @ Float
+                                                                                                                                                                              b22
+                                                                                                                                                                              (GHC.Types.:
+                                                                                                                                                                                 @ Float
+                                                                                                                                                                                 b23
+                                                                                                                                                                                 (GHC.Types.:
+                                                                                                                                                                                    @ Float
+                                                                                                                                                                                    b24
+                                                                                                                                                                                    (GHC.Types.[]
+                                                                                                                                                                                       @ Float)))))))))))))))))))))))))
+                                                                                                            }
+                                                                                                        }
+                                                                                                        }
+                                                                                                    }
+                                                                                                    }
+                                                                                                }
+                                                                                                }
+                                                                                            }
+                                                                                            }
+                                                                                        }
+                                                                                        }
+                                                                                    }
+                                                                                    }
+                                                                                }
+                                                                                }
+                                                                            }
+                                                                            }
+                                                                        }
+                                                                        }
+                                                                    }
+                                                                    }
+                                                                }
+                                                                }
+                                                            }
+                                                            }
+                                                        }
+                                                        }
+                                                    }
+                                                    }
+                                                }
+                                                }
+                                            }
+                                            }
+                                        }
+                                        }
+                                    }
+                                    }
+                                }
+                                }
+                            }
+                            }
+                        }
+                        }
+                    }
+                    }
+                }
+                }
+            } } in
+      (# case ds of { (es1, es2) ->
+         case es1 of {
+           [] -> lvl28;
+           : x0 ds1 ->
+             case ds1 of {
+               [] -> lvl28;
+               : x1 ds2 ->
+                 case ds2 of {
+                   [] -> lvl28;
+                   : x2 ds3 ->
+                     case ds3 of {
+                       [] -> lvl28;
+                       : x3 ds4 ->
+                         case ds4 of {
+                           [] -> lvl28;
+                           : x4 ds5 ->
+                             case ds5 of {
+                               [] -> lvl28;
+                               : x5 ds6 ->
+                                 case ds6 of {
+                                   [] -> lvl28;
+                                   : x6 ds7 ->
+                                     case ds7 of {
+                                       [] -> lvl28;
+                                       : x7 ds8 ->
+                                         case ds8 of {
+                                           [] -> lvl28;
+                                           : x8 ds9 ->
+                                             case ds9 of {
+                                               [] -> lvl28;
+                                               : x9 ds10 ->
+                                                 case ds10 of {
+                                                   [] -> lvl28;
+                                                   : x10 ds11 ->
+                                                     case ds11 of {
+                                                       [] -> lvl28;
+                                                       : x11 ds12 ->
+                                                         case ds12 of {
+                                                           [] -> lvl28;
+                                                           : x12 ds13 ->
+                                                             case ds13 of {
+                                                               [] -> lvl28;
+                                                               : x13 ds14 ->
+                                                                 case ds14 of {
+                                                                   [] -> lvl28;
+                                                                   : x14 ds15 ->
+                                                                     case ds15 of {
+                                                                       [] -> lvl28;
+                                                                       : x15 ds16 ->
+                                                                         case ds16 of {
+                                                                           [] -> lvl28;
+                                                                           : x16 ds17 ->
+                                                                             case ds17 of {
+                                                                               [] -> lvl28;
+                                                                               : x17 ds18 ->
+                                                                                 case ds18 of {
+                                                                                   [] -> lvl28;
+                                                                                   : x18 ds19 ->
+                                                                                     case ds19 of {
+                                                                                       [] -> lvl28;
+                                                                                       : x19 ds20 ->
+                                                                                         case ds20
+                                                                                         of {
+                                                                                           [] ->
+                                                                                             lvl28;
+                                                                                           : x20
+                                                                                             ds21 ->
+                                                                                             case ds21
+                                                                                             of {
+                                                                                               [] ->
+                                                                                                 lvl28;
+                                                                                               : x21
+                                                                                                 ds22 ->
+                                                                                                 case ds22
+                                                                                                 of {
+                                                                                                   [] ->
+                                                                                                     lvl28;
+                                                                                                   : x22
+                                                                                                     ds23 ->
+                                                                                                     case ds23
+                                                                                                     of {
+                                                                                                       [] ->
+                                                                                                         lvl28;
+                                                                                                       : x23
+                                                                                                         ds24 ->
+                                                                                                         TensorInstances.$WTensor'2'3'4'Float
+                                                                                                           x0
+                                                                                                           x1
+                                                                                                           x2
+                                                                                                           x3
+                                                                                                           x4
+                                                                                                           x5
+                                                                                                           x6
+                                                                                                           x7
+                                                                                                           x8
+                                                                                                           x9
+                                                                                                           x10
+                                                                                                           x11
+                                                                                                           x12
+                                                                                                           x13
+                                                                                                           x14
+                                                                                                           x15
+                                                                                                           x16
+                                                                                                           x17
+                                                                                                           x18
+                                                                                                           x19
+                                                                                                           x20
+                                                                                                           x21
+                                                                                                           x22
+                                                                                                           x23
+                                                                                                     }
+                                                                                                 }
+                                                                                             }
+                                                                                         }
+                                                                                     }
+                                                                                 }
+                                                                             }
+                                                                         }
+                                                                     }
+                                                                 }
+                                                             }
+                                                         }
+                                                     }
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         },
+         case ds of { (es1, es2) ->
+         case es2 of {
+           [] -> lvl28;
+           : x0 ds1 ->
+             case ds1 of {
+               [] -> lvl28;
+               : x1 ds2 ->
+                 case ds2 of {
+                   [] -> lvl28;
+                   : x2 ds3 ->
+                     case ds3 of {
+                       [] -> lvl28;
+                       : x3 ds4 ->
+                         case ds4 of {
+                           [] -> lvl28;
+                           : x4 ds5 ->
+                             case ds5 of {
+                               [] -> lvl28;
+                               : x5 ds6 ->
+                                 case ds6 of {
+                                   [] -> lvl28;
+                                   : x6 ds7 ->
+                                     case ds7 of {
+                                       [] -> lvl28;
+                                       : x7 ds8 ->
+                                         case ds8 of {
+                                           [] -> lvl28;
+                                           : x8 ds9 ->
+                                             case ds9 of {
+                                               [] -> lvl28;
+                                               : x9 ds10 ->
+                                                 case ds10 of {
+                                                   [] -> lvl28;
+                                                   : x10 ds11 ->
+                                                     case ds11 of {
+                                                       [] -> lvl28;
+                                                       : x11 ds12 ->
+                                                         case ds12 of {
+                                                           [] -> lvl28;
+                                                           : x12 ds13 ->
+                                                             case ds13 of {
+                                                               [] -> lvl28;
+                                                               : x13 ds14 ->
+                                                                 case ds14 of {
+                                                                   [] -> lvl28;
+                                                                   : x14 ds15 ->
+                                                                     case ds15 of {
+                                                                       [] -> lvl28;
+                                                                       : x15 ds16 ->
+                                                                         case ds16 of {
+                                                                           [] -> lvl28;
+                                                                           : x16 ds17 ->
+                                                                             case ds17 of {
+                                                                               [] -> lvl28;
+                                                                               : x17 ds18 ->
+                                                                                 case ds18 of {
+                                                                                   [] -> lvl28;
+                                                                                   : x18 ds19 ->
+                                                                                     case ds19 of {
+                                                                                       [] -> lvl28;
+                                                                                       : x19 ds20 ->
+                                                                                         case ds20
+                                                                                         of {
+                                                                                           [] ->
+                                                                                             lvl28;
+                                                                                           : x20
+                                                                                             ds21 ->
+                                                                                             case ds21
+                                                                                             of {
+                                                                                               [] ->
+                                                                                                 lvl28;
+                                                                                               : x21
+                                                                                                 ds22 ->
+                                                                                                 case ds22
+                                                                                                 of {
+                                                                                                   [] ->
+                                                                                                     lvl28;
+                                                                                                   : x22
+                                                                                                     ds23 ->
+                                                                                                     case ds23
+                                                                                                     of {
+                                                                                                       [] ->
+                                                                                                         lvl28;
+                                                                                                       : x23
+                                                                                                         ds24 ->
+                                                                                                         TensorInstances.$WTensor'2'3'4'Float
+                                                                                                           x0
+                                                                                                           x1
+                                                                                                           x2
+                                                                                                           x3
+                                                                                                           x4
+                                                                                                           x5
+                                                                                                           x6
+                                                                                                           x7
+                                                                                                           x8
+                                                                                                           x9
+                                                                                                           x10
+                                                                                                           x11
+                                                                                                           x12
+                                                                                                           x13
+                                                                                                           x14
+                                                                                                           x15
+                                                                                                           x16
+                                                                                                           x17
+                                                                                                           x18
+                                                                                                           x19
+                                                                                                           x20
+                                                                                                           x21
+                                                                                                           x22
+                                                                                                           x23
+                                                                                                     }
+                                                                                                 }
+                                                                                             }
+                                                                                         }
+                                                                                     }
+                                                                                 }
+                                                                             }
+                                                                         }
+                                                                     }
+                                                                 }
+                                                             }
+                                                         }
+                                                     }
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         } #)
+
+-- RHS size: {terms: 8, types: 85, coercions: 0, joins: 0/0}
+ounzip_
+  :: [(Float, Float)]
+     -> (Tensor '[2, 3, 4] Float, Tensor '[2, 3, 4] Float)
+ounzip_
+  = \ (w :: [(Float, Float)]) ->
+      case CoreDump.Tensor.Ounzip.$wounzip_ w of { (# ww1, ww2 #) ->
+      (ww1, ww2)
+      }
+
+

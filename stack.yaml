@@ -1,0 +1,7 @@
+packages:
+- location: .
+flags: {}
+extra-package-dbs: []
+compiler: ghc-8.2.1
+compiler-check: match-exact
+resolver: nightly-2017-08-29

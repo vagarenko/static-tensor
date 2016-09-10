@@ -1,0 +1,152 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:18.3848094 UTC
+
+Result size of Tidy Core
+  = {terms: 217, types: 174, coercions: 4, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OzipWith.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.OzipWith.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OzipWith.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.OzipWith.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.OzipWith.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OzipWith.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.OzipWith.$trModule2 = "CoreDump.Tensor.OzipWith"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OzipWith.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.OzipWith.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.OzipWith.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OzipWith.$trModule :: GHC.Types.Module
+CoreDump.Tensor.OzipWith.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.OzipWith.$trModule3
+      CoreDump.Tensor.OzipWith.$trModule1
+
+-- RHS size: {terms: 202, types: 127, coercions: 4, joins: 0/0}
+ozipWith_
+  :: (Float -> Float -> Float)
+     -> Tensor '[2, 3, 4] Float
+     -> Tensor '[2, 3, 4] Float
+     -> Tensor '[2, 3, 4] Float
+ozipWith_
+  = \ (f :: Float -> Float -> Float)
+      (t1 :: Tensor '[2, 3, 4] Float)
+      (t2 :: Tensor '[2, 3, 4] Float) ->
+      case t1 `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case t2 `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt29 dt30 dt31 dt32 dt33 dt34
+                                           dt35 dt36 dt37 dt38 dt39 dt40 dt41 dt42 dt43 dt44 dt45
+                                           dt46 dt47 dt48 dt49 dt50 dt51 dt52 ->
+      case f (GHC.Types.F# dt) (GHC.Types.F# dt29) of
+      { GHC.Types.F# dt54 ->
+      case f (GHC.Types.F# dt1) (GHC.Types.F# dt30) of
+      { GHC.Types.F# dt56 ->
+      case f (GHC.Types.F# dt2) (GHC.Types.F# dt31) of
+      { GHC.Types.F# dt58 ->
+      case f (GHC.Types.F# dt3) (GHC.Types.F# dt32) of
+      { GHC.Types.F# dt60 ->
+      case f (GHC.Types.F# dt4) (GHC.Types.F# dt33) of
+      { GHC.Types.F# dt62 ->
+      case f (GHC.Types.F# dt5) (GHC.Types.F# dt34) of
+      { GHC.Types.F# dt64 ->
+      case f (GHC.Types.F# dt6) (GHC.Types.F# dt35) of
+      { GHC.Types.F# dt66 ->
+      case f (GHC.Types.F# dt7) (GHC.Types.F# dt36) of
+      { GHC.Types.F# dt68 ->
+      case f (GHC.Types.F# dt8) (GHC.Types.F# dt37) of
+      { GHC.Types.F# dt70 ->
+      case f (GHC.Types.F# dt9) (GHC.Types.F# dt38) of
+      { GHC.Types.F# dt72 ->
+      case f (GHC.Types.F# dt10) (GHC.Types.F# dt39) of
+      { GHC.Types.F# dt74 ->
+      case f (GHC.Types.F# dt11) (GHC.Types.F# dt40) of
+      { GHC.Types.F# dt76 ->
+      case f (GHC.Types.F# dt12) (GHC.Types.F# dt41) of
+      { GHC.Types.F# dt78 ->
+      case f (GHC.Types.F# dt13) (GHC.Types.F# dt42) of
+      { GHC.Types.F# dt80 ->
+      case f (GHC.Types.F# dt14) (GHC.Types.F# dt43) of
+      { GHC.Types.F# dt82 ->
+      case f (GHC.Types.F# dt15) (GHC.Types.F# dt44) of
+      { GHC.Types.F# dt84 ->
+      case f (GHC.Types.F# dt16) (GHC.Types.F# dt45) of
+      { GHC.Types.F# dt86 ->
+      case f (GHC.Types.F# dt17) (GHC.Types.F# dt46) of
+      { GHC.Types.F# dt88 ->
+      case f (GHC.Types.F# dt18) (GHC.Types.F# dt47) of
+      { GHC.Types.F# dt90 ->
+      case f (GHC.Types.F# dt19) (GHC.Types.F# dt48) of
+      { GHC.Types.F# dt92 ->
+      case f (GHC.Types.F# dt20) (GHC.Types.F# dt49) of
+      { GHC.Types.F# dt94 ->
+      case f (GHC.Types.F# dt21) (GHC.Types.F# dt50) of
+      { GHC.Types.F# dt96 ->
+      case f (GHC.Types.F# dt22) (GHC.Types.F# dt51) of
+      { GHC.Types.F# dt98 ->
+      case f (GHC.Types.F# dt23) (GHC.Types.F# dt52) of
+      { GHC.Types.F# dt100 ->
+      (TensorInstances.Tensor'2'3'4'Float
+         dt54
+         dt56
+         dt58
+         dt60
+         dt62
+         dt64
+         dt66
+         dt68
+         dt70
+         dt72
+         dt74
+         dt76
+         dt78
+         dt80
+         dt82
+         dt84
+         dt86
+         dt88
+         dt90
+         dt92
+         dt94
+         dt96
+         dt98
+         dt100)
+      `cast` <Co:2>
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+
+

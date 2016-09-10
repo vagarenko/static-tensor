@@ -1,0 +1,79 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:10.557035 UTC
+
+Result size of Tidy Core
+  = {terms: 54, types: 96, coercions: 4, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Snoc_2.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Snoc_2.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Snoc_2.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Snoc_2.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Snoc_2.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Snoc_2.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Snoc_2.$trModule2 = "CoreDump.Tensor.Snoc_2"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Snoc_2.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Snoc_2.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Snoc_2.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Snoc_2.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Snoc_2.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Snoc_2.$trModule3 CoreDump.Tensor.Snoc_2.$trModule1
+
+-- RHS size: {terms: 39, types: 55, coercions: 4, joins: 0/0}
+snoc_2_
+  :: Tensor '[2, 3, 4] Float
+     -> Tensor '[2, 3] Float -> Tensor '[2, 3, 5] Float
+snoc_2_
+  = \ (st :: Tensor '[2, 3, 4] Float) (t :: Tensor '[2, 3] Float) ->
+      case st `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case t `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'Float dt29 dt30 dt31 dt32 dt33 dt34 ->
+      (TensorInstances.Tensor'2'3'5'Float
+         dt
+         dt1
+         dt2
+         dt3
+         dt29
+         dt4
+         dt5
+         dt6
+         dt7
+         dt30
+         dt8
+         dt9
+         dt10
+         dt11
+         dt31
+         dt12
+         dt13
+         dt14
+         dt15
+         dt32
+         dt16
+         dt17
+         dt18
+         dt19
+         dt33
+         dt20
+         dt21
+         dt22
+         dt23
+         dt34)
+      `cast` <Co:2>
+      }
+      }
+
+

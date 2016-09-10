@@ -1,0 +1,20 @@
+:set -XTypeFamilies
+:set -XMultiParamTypeClasses
+:set -XTypeSynonymInstances
+:set -XDataKinds
+:set -XKindSignatures
+:set -XTypeOperators
+:set -XFlexibleInstances
+:set -XFlexibleContexts
+:set -XScopedTypeVariables
+:set -XDeriveGeneric
+:set -XDeriveAnyClass
+:set -XTemplateHaskell
+:set -XStandaloneDeriving
+:set -XUndecidableInstances
+:set -XTypeApplications
+:set -XTypeInType
+:set -XAllowAmbiguousTypes
+:set -XGADTs
+:set -fprint-explicit-foralls
+:set prompt >

@@ -1,0 +1,138 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:25.5483475 UTC
+
+Result size of Tidy Core
+  = {terms: 137, types: 656, coercions: 2, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Generate.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Generate.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Generate.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Generate.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Generate.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Generate.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Generate.$trModule2 = "CoreDump.Tensor.Generate"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Generate.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Generate.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Generate.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Generate.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Generate.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Generate.$trModule3
+      CoreDump.Tensor.Generate.$trModule1
+
+-- RHS size: {terms: 122, types: 631, coercions: 2, joins: 0/0}
+generate_
+  :: (forall (index :: [Nat]). Proxy index -> Float)
+     -> Tensor '[2, 3, 4] Float
+generate_
+  = \ (ds :: forall (index :: [Nat]). Proxy index -> Float) ->
+      case ds @ '[0, 0, 0] (Data.Proxy.Proxy @ [Nat] @ '[0, 0, 0]) of
+      { GHC.Types.F# dt1 ->
+      case ds @ '[0, 0, 1] (Data.Proxy.Proxy @ [Nat] @ '[0, 0, 1]) of
+      { GHC.Types.F# dt3 ->
+      case ds @ '[0, 0, 2] (Data.Proxy.Proxy @ [Nat] @ '[0, 0, 2]) of
+      { GHC.Types.F# dt5 ->
+      case ds @ '[0, 0, 3] (Data.Proxy.Proxy @ [Nat] @ '[0, 0, 3]) of
+      { GHC.Types.F# dt7 ->
+      case ds @ '[0, 1, 0] (Data.Proxy.Proxy @ [Nat] @ '[0, 1, 0]) of
+      { GHC.Types.F# dt9 ->
+      case ds @ '[0, 1, 1] (Data.Proxy.Proxy @ [Nat] @ '[0, 1, 1]) of
+      { GHC.Types.F# dt11 ->
+      case ds @ '[0, 1, 2] (Data.Proxy.Proxy @ [Nat] @ '[0, 1, 2]) of
+      { GHC.Types.F# dt13 ->
+      case ds @ '[0, 1, 3] (Data.Proxy.Proxy @ [Nat] @ '[0, 1, 3]) of
+      { GHC.Types.F# dt15 ->
+      case ds @ '[0, 2, 0] (Data.Proxy.Proxy @ [Nat] @ '[0, 2, 0]) of
+      { GHC.Types.F# dt17 ->
+      case ds @ '[0, 2, 1] (Data.Proxy.Proxy @ [Nat] @ '[0, 2, 1]) of
+      { GHC.Types.F# dt19 ->
+      case ds @ '[0, 2, 2] (Data.Proxy.Proxy @ [Nat] @ '[0, 2, 2]) of
+      { GHC.Types.F# dt21 ->
+      case ds @ '[0, 2, 3] (Data.Proxy.Proxy @ [Nat] @ '[0, 2, 3]) of
+      { GHC.Types.F# dt23 ->
+      case ds @ '[1, 0, 0] (Data.Proxy.Proxy @ [Nat] @ '[1, 0, 0]) of
+      { GHC.Types.F# dt25 ->
+      case ds @ '[1, 0, 1] (Data.Proxy.Proxy @ [Nat] @ '[1, 0, 1]) of
+      { GHC.Types.F# dt27 ->
+      case ds @ '[1, 0, 2] (Data.Proxy.Proxy @ [Nat] @ '[1, 0, 2]) of
+      { GHC.Types.F# dt29 ->
+      case ds @ '[1, 0, 3] (Data.Proxy.Proxy @ [Nat] @ '[1, 0, 3]) of
+      { GHC.Types.F# dt31 ->
+      case ds @ '[1, 1, 0] (Data.Proxy.Proxy @ [Nat] @ '[1, 1, 0]) of
+      { GHC.Types.F# dt33 ->
+      case ds @ '[1, 1, 1] (Data.Proxy.Proxy @ [Nat] @ '[1, 1, 1]) of
+      { GHC.Types.F# dt35 ->
+      case ds @ '[1, 1, 2] (Data.Proxy.Proxy @ [Nat] @ '[1, 1, 2]) of
+      { GHC.Types.F# dt37 ->
+      case ds @ '[1, 1, 3] (Data.Proxy.Proxy @ [Nat] @ '[1, 1, 3]) of
+      { GHC.Types.F# dt39 ->
+      case ds @ '[1, 2, 0] (Data.Proxy.Proxy @ [Nat] @ '[1, 2, 0]) of
+      { GHC.Types.F# dt41 ->
+      case ds @ '[1, 2, 1] (Data.Proxy.Proxy @ [Nat] @ '[1, 2, 1]) of
+      { GHC.Types.F# dt43 ->
+      case ds @ '[1, 2, 2] (Data.Proxy.Proxy @ [Nat] @ '[1, 2, 2]) of
+      { GHC.Types.F# dt45 ->
+      case ds @ '[1, 2, 3] (Data.Proxy.Proxy @ [Nat] @ '[1, 2, 3]) of
+      { GHC.Types.F# dt47 ->
+      (TensorInstances.Tensor'2'3'4'Float
+         dt1
+         dt3
+         dt5
+         dt7
+         dt9
+         dt11
+         dt13
+         dt15
+         dt17
+         dt19
+         dt21
+         dt23
+         dt25
+         dt27
+         dt29
+         dt31
+         dt33
+         dt35
+         dt37
+         dt39
+         dt41
+         dt43
+         dt45
+         dt47)
+      `cast` <Co:2>
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+
+

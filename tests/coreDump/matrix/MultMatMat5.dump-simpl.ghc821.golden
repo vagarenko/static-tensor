@@ -1,0 +1,663 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:37:01.406746 UTC
+
+Result size of Tidy Core
+  = {terms: 1,044, types: 182, coercions: 7, joins: 0/48}
+
+-- RHS size: {terms: 1,029, types: 153, coercions: 7, joins: 0/48}
+multMatMat5_
+  :: Matrix 4 4 Float
+     -> Matrix 4 4 Float
+     -> Matrix 4 4 Float
+     -> Matrix 4 4 Float
+     -> Matrix 4 4 Float
+     -> Matrix 4 4 Float
+multMatMat5_
+  = \ (a :: Matrix 4 4 Float)
+      (b :: Matrix 4 4 Float)
+      (c :: Matrix 4 4 Float)
+      (d :: Matrix 4 4 Float)
+      (e :: Matrix 4 4 Float) ->
+      case a `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 ->
+      case b `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt16 dt17 dt18 dt19 dt20 dt21
+                                         dt22 dt23 dt24 dt25 dt26 dt27 dt28 dt29 dt30 dt31 ->
+      case c `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt32 dt33 dt34 dt35 dt36 dt37
+                                         dt38 dt39 dt40 dt41 dt42 dt43 dt44 dt45 dt46 dt47 ->
+      case d `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt48 dt49 dt50 dt51 dt52 dt53
+                                         dt54 dt55 dt56 dt57 dt58 dt59 dt60 dt61 dt62 dt63 ->
+      case e `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt64 dt65 dt66 dt67 dt68 dt69
+                                         dt70 dt71 dt72 dt73 dt74 dt75 dt76 dt77 dt78 dt79 ->
+      let {
+        dt80 :: GHC.Prim.Float#
+        dt80
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt dt16)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt1 dt20)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt2 dt24)
+                    (GHC.Prim.timesFloat# dt3 dt28))) } in
+      let {
+        dt81 :: GHC.Prim.Float#
+        dt81
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt dt17)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt1 dt21)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt2 dt25)
+                    (GHC.Prim.timesFloat# dt3 dt29))) } in
+      let {
+        dt82 :: GHC.Prim.Float#
+        dt82
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt dt18)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt1 dt22)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt2 dt26)
+                    (GHC.Prim.timesFloat# dt3 dt30))) } in
+      let {
+        dt83 :: GHC.Prim.Float#
+        dt83
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt dt19)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt1 dt23)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt2 dt27)
+                    (GHC.Prim.timesFloat# dt3 dt31))) } in
+      let {
+        dt84 :: GHC.Prim.Float#
+        dt84
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt80 dt32)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt81 dt36)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt82 dt40)
+                    (GHC.Prim.timesFloat# dt83 dt44))) } in
+      let {
+        dt85 :: GHC.Prim.Float#
+        dt85
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt80 dt33)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt81 dt37)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt82 dt41)
+                    (GHC.Prim.timesFloat# dt83 dt45))) } in
+      let {
+        dt86 :: GHC.Prim.Float#
+        dt86
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt80 dt34)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt81 dt38)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt82 dt42)
+                    (GHC.Prim.timesFloat# dt83 dt46))) } in
+      let {
+        dt87 :: GHC.Prim.Float#
+        dt87
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt80 dt35)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt81 dt39)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt82 dt43)
+                    (GHC.Prim.timesFloat# dt83 dt47))) } in
+      let {
+        dt88 :: GHC.Prim.Float#
+        dt88
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt84 dt48)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt85 dt52)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt86 dt56)
+                    (GHC.Prim.timesFloat# dt87 dt60))) } in
+      let {
+        dt89 :: GHC.Prim.Float#
+        dt89
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt84 dt49)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt85 dt53)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt86 dt57)
+                    (GHC.Prim.timesFloat# dt87 dt61))) } in
+      let {
+        dt90 :: GHC.Prim.Float#
+        dt90
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt84 dt50)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt85 dt54)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt86 dt58)
+                    (GHC.Prim.timesFloat# dt87 dt62))) } in
+      let {
+        dt91 :: GHC.Prim.Float#
+        dt91
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt84 dt51)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt85 dt55)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt86 dt59)
+                    (GHC.Prim.timesFloat# dt87 dt63))) } in
+      let {
+        dt92 :: GHC.Prim.Float#
+        dt92
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt4 dt16)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt5 dt20)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt6 dt24)
+                    (GHC.Prim.timesFloat# dt7 dt28))) } in
+      let {
+        dt93 :: GHC.Prim.Float#
+        dt93
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt4 dt17)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt5 dt21)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt6 dt25)
+                    (GHC.Prim.timesFloat# dt7 dt29))) } in
+      let {
+        dt94 :: GHC.Prim.Float#
+        dt94
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt4 dt18)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt5 dt22)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt6 dt26)
+                    (GHC.Prim.timesFloat# dt7 dt30))) } in
+      let {
+        dt95 :: GHC.Prim.Float#
+        dt95
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt4 dt19)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt5 dt23)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt6 dt27)
+                    (GHC.Prim.timesFloat# dt7 dt31))) } in
+      let {
+        dt96 :: GHC.Prim.Float#
+        dt96
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt92 dt32)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt93 dt36)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt94 dt40)
+                    (GHC.Prim.timesFloat# dt95 dt44))) } in
+      let {
+        dt97 :: GHC.Prim.Float#
+        dt97
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt92 dt33)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt93 dt37)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt94 dt41)
+                    (GHC.Prim.timesFloat# dt95 dt45))) } in
+      let {
+        dt98 :: GHC.Prim.Float#
+        dt98
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt92 dt34)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt93 dt38)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt94 dt42)
+                    (GHC.Prim.timesFloat# dt95 dt46))) } in
+      let {
+        dt99 :: GHC.Prim.Float#
+        dt99
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt92 dt35)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt93 dt39)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt94 dt43)
+                    (GHC.Prim.timesFloat# dt95 dt47))) } in
+      let {
+        dt100 :: GHC.Prim.Float#
+        dt100
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt96 dt48)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt97 dt52)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt98 dt56)
+                    (GHC.Prim.timesFloat# dt99 dt60))) } in
+      let {
+        dt101 :: GHC.Prim.Float#
+        dt101
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt96 dt49)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt97 dt53)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt98 dt57)
+                    (GHC.Prim.timesFloat# dt99 dt61))) } in
+      let {
+        dt102 :: GHC.Prim.Float#
+        dt102
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt96 dt50)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt97 dt54)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt98 dt58)
+                    (GHC.Prim.timesFloat# dt99 dt62))) } in
+      let {
+        dt103 :: GHC.Prim.Float#
+        dt103
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt96 dt51)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt97 dt55)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt98 dt59)
+                    (GHC.Prim.timesFloat# dt99 dt63))) } in
+      let {
+        dt104 :: GHC.Prim.Float#
+        dt104
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt8 dt16)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt9 dt20)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt10 dt24)
+                    (GHC.Prim.timesFloat# dt11 dt28))) } in
+      let {
+        dt105 :: GHC.Prim.Float#
+        dt105
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt8 dt17)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt9 dt21)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt10 dt25)
+                    (GHC.Prim.timesFloat# dt11 dt29))) } in
+      let {
+        dt106 :: GHC.Prim.Float#
+        dt106
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt8 dt18)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt9 dt22)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt10 dt26)
+                    (GHC.Prim.timesFloat# dt11 dt30))) } in
+      let {
+        dt107 :: GHC.Prim.Float#
+        dt107
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt8 dt19)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt9 dt23)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt10 dt27)
+                    (GHC.Prim.timesFloat# dt11 dt31))) } in
+      let {
+        dt108 :: GHC.Prim.Float#
+        dt108
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt104 dt32)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt105 dt36)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt106 dt40)
+                    (GHC.Prim.timesFloat# dt107 dt44))) } in
+      let {
+        dt109 :: GHC.Prim.Float#
+        dt109
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt104 dt33)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt105 dt37)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt106 dt41)
+                    (GHC.Prim.timesFloat# dt107 dt45))) } in
+      let {
+        dt110 :: GHC.Prim.Float#
+        dt110
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt104 dt34)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt105 dt38)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt106 dt42)
+                    (GHC.Prim.timesFloat# dt107 dt46))) } in
+      let {
+        dt111 :: GHC.Prim.Float#
+        dt111
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt104 dt35)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt105 dt39)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt106 dt43)
+                    (GHC.Prim.timesFloat# dt107 dt47))) } in
+      let {
+        dt112 :: GHC.Prim.Float#
+        dt112
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt108 dt48)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt109 dt52)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt110 dt56)
+                    (GHC.Prim.timesFloat# dt111 dt60))) } in
+      let {
+        dt113 :: GHC.Prim.Float#
+        dt113
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt108 dt49)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt109 dt53)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt110 dt57)
+                    (GHC.Prim.timesFloat# dt111 dt61))) } in
+      let {
+        dt114 :: GHC.Prim.Float#
+        dt114
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt108 dt50)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt109 dt54)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt110 dt58)
+                    (GHC.Prim.timesFloat# dt111 dt62))) } in
+      let {
+        dt115 :: GHC.Prim.Float#
+        dt115
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt108 dt51)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt109 dt55)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt110 dt59)
+                    (GHC.Prim.timesFloat# dt111 dt63))) } in
+      let {
+        dt116 :: GHC.Prim.Float#
+        dt116
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt12 dt16)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt13 dt20)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt14 dt24)
+                    (GHC.Prim.timesFloat# dt15 dt28))) } in
+      let {
+        dt117 :: GHC.Prim.Float#
+        dt117
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt12 dt17)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt13 dt21)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt14 dt25)
+                    (GHC.Prim.timesFloat# dt15 dt29))) } in
+      let {
+        dt118 :: GHC.Prim.Float#
+        dt118
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt12 dt18)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt13 dt22)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt14 dt26)
+                    (GHC.Prim.timesFloat# dt15 dt30))) } in
+      let {
+        dt119 :: GHC.Prim.Float#
+        dt119
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt12 dt19)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt13 dt23)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt14 dt27)
+                    (GHC.Prim.timesFloat# dt15 dt31))) } in
+      let {
+        dt120 :: GHC.Prim.Float#
+        dt120
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt116 dt32)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt117 dt36)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt118 dt40)
+                    (GHC.Prim.timesFloat# dt119 dt44))) } in
+      let {
+        dt121 :: GHC.Prim.Float#
+        dt121
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt116 dt33)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt117 dt37)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt118 dt41)
+                    (GHC.Prim.timesFloat# dt119 dt45))) } in
+      let {
+        dt122 :: GHC.Prim.Float#
+        dt122
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt116 dt34)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt117 dt38)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt118 dt42)
+                    (GHC.Prim.timesFloat# dt119 dt46))) } in
+      let {
+        dt123 :: GHC.Prim.Float#
+        dt123
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt116 dt35)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt117 dt39)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt118 dt43)
+                    (GHC.Prim.timesFloat# dt119 dt47))) } in
+      let {
+        dt124 :: GHC.Prim.Float#
+        dt124
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt120 dt48)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt121 dt52)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt122 dt56)
+                    (GHC.Prim.timesFloat# dt123 dt60))) } in
+      let {
+        dt125 :: GHC.Prim.Float#
+        dt125
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt120 dt49)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt121 dt53)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt122 dt57)
+                    (GHC.Prim.timesFloat# dt123 dt61))) } in
+      let {
+        dt126 :: GHC.Prim.Float#
+        dt126
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt120 dt50)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt121 dt54)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt122 dt58)
+                    (GHC.Prim.timesFloat# dt123 dt62))) } in
+      let {
+        dt127 :: GHC.Prim.Float#
+        dt127
+          = GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat# dt120 dt51)
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat# dt121 dt55)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt122 dt59)
+                    (GHC.Prim.timesFloat# dt123 dt63))) } in
+      (TensorInstances.Tensor'4'4'Float
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt88 dt64)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt89 dt68)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt90 dt72)
+                  (GHC.Prim.timesFloat# dt91 dt76))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt88 dt65)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt89 dt69)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt90 dt73)
+                  (GHC.Prim.timesFloat# dt91 dt77))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt88 dt66)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt89 dt70)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt90 dt74)
+                  (GHC.Prim.timesFloat# dt91 dt78))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt88 dt67)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt89 dt71)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt90 dt75)
+                  (GHC.Prim.timesFloat# dt91 dt79))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt100 dt64)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt101 dt68)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt102 dt72)
+                  (GHC.Prim.timesFloat# dt103 dt76))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt100 dt65)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt101 dt69)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt102 dt73)
+                  (GHC.Prim.timesFloat# dt103 dt77))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt100 dt66)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt101 dt70)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt102 dt74)
+                  (GHC.Prim.timesFloat# dt103 dt78))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt100 dt67)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt101 dt71)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt102 dt75)
+                  (GHC.Prim.timesFloat# dt103 dt79))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt112 dt64)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt113 dt68)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt114 dt72)
+                  (GHC.Prim.timesFloat# dt115 dt76))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt112 dt65)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt113 dt69)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt114 dt73)
+                  (GHC.Prim.timesFloat# dt115 dt77))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt112 dt66)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt113 dt70)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt114 dt74)
+                  (GHC.Prim.timesFloat# dt115 dt78))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt112 dt67)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt113 dt71)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt114 dt75)
+                  (GHC.Prim.timesFloat# dt115 dt79))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt124 dt64)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt125 dt68)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt126 dt72)
+                  (GHC.Prim.timesFloat# dt127 dt76))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt124 dt65)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt125 dt69)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt126 dt73)
+                  (GHC.Prim.timesFloat# dt127 dt77))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt124 dt66)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt125 dt70)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt126 dt74)
+                  (GHC.Prim.timesFloat# dt127 dt78))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt124 dt67)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt125 dt71)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt126 dt75)
+                  (GHC.Prim.timesFloat# dt127 dt79)))))
+      `cast` <Co:2>
+      }
+      }
+      }
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat5.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.MultMatMat5.$trModule2
+  = "CoreDump.Matrix.MultMatMat5"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat5.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.MultMatMat5.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.MultMatMat5.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat5.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.MultMatMat5.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat5.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.MultMatMat5.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.MultMatMat5.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat5.$trModule :: GHC.Types.Module
+CoreDump.Matrix.MultMatMat5.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.MultMatMat5.$trModule3
+      CoreDump.Matrix.MultMatMat5.$trModule1
+
+

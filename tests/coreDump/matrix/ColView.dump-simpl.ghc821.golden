@@ -1,0 +1,43 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:39:00.5569984 UTC
+
+Result size of Tidy Core
+  = {terms: 24, types: 39, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.ColView.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.ColView.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.ColView.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.ColView.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.ColView.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.ColView.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.ColView.$trModule2 = "CoreDump.Matrix.ColView"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.ColView.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.ColView.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.ColView.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.ColView.$trModule :: GHC.Types.Module
+CoreDump.Matrix.ColView.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.ColView.$trModule3
+      CoreDump.Matrix.ColView.$trModule1
+
+-- RHS size: {terms: 9, types: 27, coercions: 3, joins: 0/0}
+colView_ :: Matrix 4 4 Float -> Vector 4 Float
+colView_
+  = \ (s1 :: Data.Tensor.Static.Tensor '[4, 4] Float) ->
+      case s1 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 ->
+      (TensorInstances.Tensor'4'Float dt dt4 dt8 dt12) `cast` <Co:2>
+      }
+
+

@@ -1,0 +1,139 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:26.39215 UTC
+
+Result size of Tidy Core
+  = {terms: 138, types: 59, coercions: 2, joins: 0/22}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.EnumFromN.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.EnumFromN.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.EnumFromN.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.EnumFromN.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.EnumFromN.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.EnumFromN.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.EnumFromN.$trModule2 = "CoreDump.Tensor.EnumFromN"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.EnumFromN.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.EnumFromN.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.EnumFromN.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.EnumFromN.$trModule :: GHC.Types.Module
+CoreDump.Tensor.EnumFromN.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.EnumFromN.$trModule3
+      CoreDump.Tensor.EnumFromN.$trModule1
+
+-- RHS size: {terms: 116, types: 23, coercions: 2, joins: 0/22}
+CoreDump.Tensor.EnumFromN.$wenumFromN_
+  :: GHC.Prim.Float# -> Tensor '[2, 3, 4] Float
+CoreDump.Tensor.EnumFromN.$wenumFromN_
+  = \ (ww :: GHC.Prim.Float#) ->
+      let {
+        a1 :: GHC.Prim.Float#
+        a1 = GHC.Prim.plusFloat# ww 1.0# } in
+      let {
+        a2 :: GHC.Prim.Float#
+        a2 = GHC.Prim.plusFloat# a1 1.0# } in
+      let {
+        a3 :: GHC.Prim.Float#
+        a3 = GHC.Prim.plusFloat# a2 1.0# } in
+      let {
+        a4 :: GHC.Prim.Float#
+        a4 = GHC.Prim.plusFloat# a3 1.0# } in
+      let {
+        a5 :: GHC.Prim.Float#
+        a5 = GHC.Prim.plusFloat# a4 1.0# } in
+      let {
+        a6 :: GHC.Prim.Float#
+        a6 = GHC.Prim.plusFloat# a5 1.0# } in
+      let {
+        a7 :: GHC.Prim.Float#
+        a7 = GHC.Prim.plusFloat# a6 1.0# } in
+      let {
+        a8 :: GHC.Prim.Float#
+        a8 = GHC.Prim.plusFloat# a7 1.0# } in
+      let {
+        a9 :: GHC.Prim.Float#
+        a9 = GHC.Prim.plusFloat# a8 1.0# } in
+      let {
+        a10 :: GHC.Prim.Float#
+        a10 = GHC.Prim.plusFloat# a9 1.0# } in
+      let {
+        a11 :: GHC.Prim.Float#
+        a11 = GHC.Prim.plusFloat# a10 1.0# } in
+      let {
+        a12 :: GHC.Prim.Float#
+        a12 = GHC.Prim.plusFloat# a11 1.0# } in
+      let {
+        a13 :: GHC.Prim.Float#
+        a13 = GHC.Prim.plusFloat# a12 1.0# } in
+      let {
+        a14 :: GHC.Prim.Float#
+        a14 = GHC.Prim.plusFloat# a13 1.0# } in
+      let {
+        a15 :: GHC.Prim.Float#
+        a15 = GHC.Prim.plusFloat# a14 1.0# } in
+      let {
+        a16 :: GHC.Prim.Float#
+        a16 = GHC.Prim.plusFloat# a15 1.0# } in
+      let {
+        a17 :: GHC.Prim.Float#
+        a17 = GHC.Prim.plusFloat# a16 1.0# } in
+      let {
+        a18 :: GHC.Prim.Float#
+        a18 = GHC.Prim.plusFloat# a17 1.0# } in
+      let {
+        a19 :: GHC.Prim.Float#
+        a19 = GHC.Prim.plusFloat# a18 1.0# } in
+      let {
+        a20 :: GHC.Prim.Float#
+        a20 = GHC.Prim.plusFloat# a19 1.0# } in
+      let {
+        a21 :: GHC.Prim.Float#
+        a21 = GHC.Prim.plusFloat# a20 1.0# } in
+      let {
+        a22 :: GHC.Prim.Float#
+        a22 = GHC.Prim.plusFloat# a21 1.0# } in
+      (TensorInstances.Tensor'2'3'4'Float
+         ww
+         a1
+         a2
+         a3
+         a4
+         a5
+         a6
+         a7
+         a8
+         a9
+         a10
+         a11
+         a12
+         a13
+         a14
+         a15
+         a16
+         a17
+         a18
+         a19
+         a20
+         a21
+         a22
+         (GHC.Prim.plusFloat# a22 1.0#))
+      `cast` <Co:2>
+
+-- RHS size: {terms: 6, types: 3, coercions: 0, joins: 0/0}
+enumFromN_ :: Float -> Tensor '[2, 3, 4] Float
+enumFromN_
+  = \ (w :: Float) ->
+      case w of { GHC.Types.F# ww1 ->
+      CoreDump.Tensor.EnumFromN.$wenumFromN_ ww1
+      }
+
+

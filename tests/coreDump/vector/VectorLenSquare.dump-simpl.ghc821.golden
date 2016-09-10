@@ -1,0 +1,56 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:05.5261617 UTC
+
+Result size of Tidy Core
+  = {terms: 37, types: 24, coercions: 63, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLenSquare.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Vector.VectorLenSquare.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLenSquare.$trModule3 :: GHC.Types.TrName
+CoreDump.Vector.VectorLenSquare.$trModule3
+  = GHC.Types.TrNameS CoreDump.Vector.VectorLenSquare.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLenSquare.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Vector.VectorLenSquare.$trModule2
+  = "CoreDump.Vector.VectorLenSquare"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLenSquare.$trModule1 :: GHC.Types.TrName
+CoreDump.Vector.VectorLenSquare.$trModule1
+  = GHC.Types.TrNameS CoreDump.Vector.VectorLenSquare.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLenSquare.$trModule :: GHC.Types.Module
+CoreDump.Vector.VectorLenSquare.$trModule
+  = GHC.Types.Module
+      CoreDump.Vector.VectorLenSquare.$trModule3
+      CoreDump.Vector.VectorLenSquare.$trModule1
+
+-- RHS size: {terms: 20, types: 8, coercions: 51, joins: 0/0}
+CoreDump.Vector.VectorLenSquare.vectorLenSquare_1
+  :: Vector 4 Float -> Data.MonoTraversable.Element (Vector 4 Float)
+CoreDump.Vector.VectorLenSquare.vectorLenSquare_1
+  = \ (x :: Vector 4 Float) ->
+      case x `cast` <Co:1> of
+      { TensorInstances.Tensor'4'Float dt dt1 dt2 dt3 ->
+      (GHC.Types.F#
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt3 dt3) (GHC.Prim.timesFloat# dt2 dt2))
+               (GHC.Prim.timesFloat# dt1 dt1))
+            (GHC.Prim.timesFloat# dt dt)))
+      `cast` <Co:50>
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 12, joins: 0/0}
+vectorLenSquare_ :: Vector 4 Float -> Float
+vectorLenSquare_
+  = CoreDump.Vector.VectorLenSquare.vectorLenSquare_1 `cast` <Co:12>
+
+

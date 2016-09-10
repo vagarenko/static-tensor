@@ -1,0 +1,12 @@
+/.cabal-sandbox
+/cabal.sandbox.config
+/dist
+*.dump-simpl
+*.dump-stg
+*.dump-splices
+*.dump-asm
+*.hi
+*.o
+*.exe
+/.stack-work
+/.vscode

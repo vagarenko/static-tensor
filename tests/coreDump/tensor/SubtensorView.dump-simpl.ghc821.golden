@@ -1,0 +1,45 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:08.9129798 UTC
+
+Result size of Tidy Core
+  = {terms: 24, types: 63, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SubtensorView.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.SubtensorView.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SubtensorView.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.SubtensorView.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.SubtensorView.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SubtensorView.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.SubtensorView.$trModule2
+  = "CoreDump.Tensor.SubtensorView"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SubtensorView.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.SubtensorView.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.SubtensorView.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SubtensorView.$trModule :: GHC.Types.Module
+CoreDump.Tensor.SubtensorView.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.SubtensorView.$trModule3
+      CoreDump.Tensor.SubtensorView.$trModule1
+
+-- RHS size: {terms: 9, types: 38, coercions: 3, joins: 0/0}
+subtensorView_ :: Tensor '[2, 3, 4] Float -> Tensor '[4] Float
+subtensorView_
+  = \ (s1 :: Tensor '[2, 3, 4] Float) ->
+      case s1 `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      (TensorInstances.Tensor'4'Float dt16 dt17 dt18 dt19) `cast` <Co:2>
+      }
+
+

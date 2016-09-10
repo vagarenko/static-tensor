@@ -1,0 +1,122 @@
+
+==================== Tidy Core ====================
+2017-09-08 01:36:15.6499161 UTC
+
+Result size of Tidy Core
+  = {terms: 110, types: 247, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSliceElems.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.SetSliceElems.$trModule2
+  = "CoreDump.Tensor.SetSliceElems"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSliceElems.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.SetSliceElems.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.SetSliceElems.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSliceElems.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.SetSliceElems.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSliceElems.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.SetSliceElems.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.SetSliceElems.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSliceElems.$trModule :: GHC.Types.Module
+CoreDump.Tensor.SetSliceElems.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.SetSliceElems.$trModule3
+      CoreDump.Tensor.SetSliceElems.$trModule1
+
+-- RHS size: {terms: 95, types: 213, coercions: 3, joins: 0/0}
+setSliceElems_
+  :: Tensor '[2, 3, 4] Float
+     -> [Float] -> Maybe (Tensor '[2, 3, 4] Float)
+setSliceElems_
+  = \ (t :: Tensor '[2, 3, 4] Float) (xs :: [Float]) ->
+      case t `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case xs of {
+        [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+        : ipv2 ipv3 ->
+          case ipv3 of {
+            [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+            : ipv1 ipv5 ->
+              case ipv5 of {
+                [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+                : ipv6 ipv7 ->
+                  case ipv7 of {
+                    [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+                    : ipv8 ipv9 ->
+                      case ipv9 of {
+                        [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+                        : ipv10 ipv11 ->
+                          case ipv11 of {
+                            [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+                            : ipv12 ipv13 ->
+                              case ipv13 of {
+                                [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+                                : ipv14 ipv15 ->
+                                  case ipv15 of {
+                                    [] -> GHC.Base.Nothing @ (Tensor '[2, 3, 4] Float);
+                                    : ipv16 ipv17 ->
+                                      GHC.Base.Just
+                                        @ (Tensor '[2, 3, 4] Float)
+                                        (case ipv2 of { GHC.Types.F# dt30 ->
+                                         case ipv1 of { GHC.Types.F# dt32 ->
+                                         case ipv6 of { GHC.Types.F# dt34 ->
+                                         case ipv8 of { GHC.Types.F# dt36 ->
+                                         case ipv10 of { GHC.Types.F# dt38 ->
+                                         case ipv12 of { GHC.Types.F# dt40 ->
+                                         case ipv14 of { GHC.Types.F# dt42 ->
+                                         case ipv16 of { GHC.Types.F# dt44 ->
+                                         (TensorInstances.Tensor'2'3'4'Float
+                                            dt
+                                            dt1
+                                            dt2
+                                            dt3
+                                            dt4
+                                            dt5
+                                            dt30
+                                            dt32
+                                            dt8
+                                            dt9
+                                            dt34
+                                            dt36
+                                            dt12
+                                            dt13
+                                            dt14
+                                            dt15
+                                            dt16
+                                            dt17
+                                            dt38
+                                            dt40
+                                            dt20
+                                            dt21
+                                            dt42
+                                            dt44)
+                                         `cast` <Co:2>
+                                         }
+                                         }
+                                         }
+                                         }
+                                         }
+                                         }
+                                         }
+                                         })
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      }
+
+
