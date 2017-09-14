@@ -1,6 +1,6 @@
 
 ==================== Tidy Core ====================
-2017-09-08 01:36:24.8605411 UTC
+2017-09-15 00:00:05.9794125 UTC
 
 Result size of Tidy Core
   = {terms: 1,482, types: 4,058, coercions: 7,986, joins: 0/0}
@@ -501,7 +501,7 @@ loc1
 
 -- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
 loc2 :: GHC.Prim.Addr#
-loc2 = "tests\\coredump\\tensor\\GenerateSing.hs"#
+loc2 = "tests\\CoreDump\\Tensor\\GenerateSing.hs"#
 
 -- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
 loc3 :: [Char]

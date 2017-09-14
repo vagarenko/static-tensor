@@ -10,3 +10,4 @@
 *.exe
 /.stack-work
 /.vscode
+/dist-newstyle

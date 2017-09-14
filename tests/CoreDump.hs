@@ -1,7 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE TypeApplications #-}
 
 module Main where
 
+import Data.Algorithm.Diff
 import Data.Text                    (Text)
 import System.Exit
 import System.Process.Typed
@@ -18,7 +20,7 @@ tests :: TestTree
 tests =
     testGroup "Core Dump"
         [ testGroup "Tensor" $
-            testFilesInDir "tests/coredump/tensor/"
+            testFilesInDir "tests/CoreDump/Tensor/"
                 [ "Add"
                 , "Append_0"
                 , "Append_1"
@@ -68,7 +70,7 @@ tests =
                 , "Zero"
                 ]
         , testGroup "Vector" $
-            testFilesInDir "tests/coredump/vector/"
+            testFilesInDir "tests/CoreDump/Vector/"
                 [ "Cross"
                 , "Dot"
                 , "Normalize"
@@ -76,7 +78,7 @@ tests =
                 , "VectorLenSquare"
                 ]
         , testGroup "Matrix" $
-            testFilesInDir "tests/coredump/matrix/"
+            testFilesInDir "tests/CoreDump/Matrix/"
                 [ "Identity"
                 , "RowView"
                 , "RowSet"
@@ -113,8 +115,28 @@ testCoreDump name =
         name
         (T.readFile $ name ++ ".dump-simpl.ghc821.golden")
         (mkCoreDump $ name)
-        (\g x -> pure $ if normalizeDump g == normalizeDump x then Nothing else Just "Different Core.")
+        cmp
         (const $ pure ())
+    where
+        cmp golden new = pure $
+            if ng == nn
+                then Nothing
+                else Just
+                    . concatMap showDiff
+                    . filter filterDiff
+                    $ getDiff @(Text, Int) (ng `zip` [4..]) (nn `zip` [4..])
+                    -- line numbers start from 4 because we deleted first 3 lines
+            where
+                ng = normalizeDump golden
+                nn = normalizeDump new
+                filterDiff d = case d of
+                    First  _ -> True
+                    Second _ -> True
+                    Both _ _ -> False
+                showDiff d = case d of
+                    First  (t, ln) -> "Golden file @" ++ show ln ++ ":" ++ T.unpack t ++ "\n"
+                    Second (t, ln) -> "New file    @" ++ show ln ++ ":" ++ T.unpack t ++ "\n"
+                    Both _ _ -> ""
 
 mkCoreDump :: String -> IO Text
 mkCoreDump name = do
@@ -139,9 +161,9 @@ mkCoreDump name = do
         _             -> pure ()
     T.readFile $ name ++ ".dump-simpl"
 
-normalizeDump :: Text -> Text
+normalizeDump :: Text -> [Text]
 normalizeDump t = 
     case T.lines $ T.replace "\r\n" "\n" t of
         -- Assuming "Tidy Core" header with timestamp takes the first 3 lines.
-        (_ : _ : _ : xs) -> T.unlines xs
+        (_ : _ : _ : xs) -> xs
         _                -> error "Incorrect dump format."
