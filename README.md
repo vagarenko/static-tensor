@@ -51,7 +51,7 @@ Data.Matrix.Static.genMatrixInstance    :: Int                -- ^ Number of row
                                         -> Q [Dec]
 ```
 
-This code for instance
+This code, for example
 
 ```haskell
 $(genVectorInstance 4 ''Float)
@@ -187,3 +187,44 @@ Also see test suite for more Core dumps.
 ## Performance
 Loop unrolling allows to achive greater performance.
 In matrix multiplication benchmark, for instance, this library is 3 times faster than the `linear` package.
+![Bench](https://raw.githubusercontent.com/vagarenko/static-tensor/master/bench.png)
+
+```
+benchmarking matrix mult 4x4/tensor
+time                 58.24 ns   (58.13 ns .. 58.39 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 58.16 ns   (58.03 ns .. 58.41 ns)
+std dev              557.6 ps   (304.1 ps .. 904.9 ps)
+
+benchmarking matrix mult 4x4/linear
+time                 197.2 ns   (196.3 ns .. 198.5 ns)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 197.3 ns   (196.2 ns .. 198.8 ns)
+std dev              4.364 ns   (3.190 ns .. 5.935 ns)
+variance introduced by outliers: 30% (moderately inflated)
+
+benchmarking matrix mult 4x4/unrolled
+time                 60.11 ns   (60.01 ns .. 60.25 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 59.98 ns   (59.88 ns .. 60.10 ns)
+std dev              376.7 ps   (320.8 ps .. 455.2 ps)
+
+benchmarking matrix mult 4x4/unrolledFull
+time                 60.20 ns   (59.85 ns .. 60.62 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 59.89 ns   (59.71 ns .. 60.14 ns)
+std dev              691.5 ps   (518.4 ps .. 949.5 ps)
+variance introduced by outliers: 11% (moderately inflated)
+
+benchmarking matrix mult 4x4/vector
+time                 420.1 ns   (419.2 ns .. 420.9 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 418.0 ns   (416.9 ns .. 419.4 ns)
+std dev              3.881 ns   (2.799 ns .. 6.224 ns)
+
+benchmarking matrix mult 4x4/vector4
+time                 95.30 ns   (94.95 ns .. 95.59 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 94.59 ns   (94.35 ns .. 94.86 ns)
+std dev              877.4 ps   (721.2 ps .. 1.167 ns)
+```
