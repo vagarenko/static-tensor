@@ -1,4 +1,7 @@
 # Static tensor
+
+[![Build Status](https://api.travis-ci.org/vagarenko/static-tensor.svg?branch=master)](https://travis-ci.org/vagarenko/static-tensor)
+
 Sometimes when working with vectors or matrices or tensors of any rank, you know their sizes 
 and types of their elements at compile time, and you don't need to change them at runtime.
 
