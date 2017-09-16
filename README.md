@@ -7,7 +7,7 @@ Sometimes when working with vectors or matrices or tensors of any rank, you know
 and types of their elements at compile time, and you don't need to change them at runtime.
 
 This library provides a uniform interface for working with tensors of any rank. 
-It uses dependently typed techniques to catch errors at compile time instead of runtime.
+It uses type-level programing to catch errors at compile time instead of runtime.
 It also (ab)uses GHC optimizations to unroll loops to achieve greater performance.
 
 ## Tensor data family
