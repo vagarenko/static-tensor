@@ -1456,13 +1456,13 @@ instance (MonoZipCtx dims e) => MonoZip (Tensor dims e) where
 
     ozip t1 t2 = U.zip @(ElemsNumber dims) (toList t1) (toList t2)
 
-    ounzip ps = (unsafeFromList es1, unsafeFromList es2)
-        where (es1, es2) = U.unzip @(ElemsNumber dims) ps
+    ounzip ps = 
+        let (es1, es2) = U.unzip @(ElemsNumber dims) ps
+            !t1 = unsafeFromList es1
+            !t2 = unsafeFromList es2
+        in (t1, t2)
 
 -- | Constraints for 'MonoZip' instance for @'Tensor' dims e@.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for 'ounzip' method.
--- Expect it to be slower than most of the functions in the package.
 type MonoZipCtx (dims :: [Nat]) e =
     ( IsTensor dims e
     , U.Map (ElemsNumber dims)

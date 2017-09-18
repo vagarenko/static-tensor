@@ -7,7 +7,6 @@ import Data.Tensor.Static
 import Data.Containers
 import TensorInstances ()
 
--- FIXME: generates suboptimal core.
 ounzip_ :: [(Float, Float)]
         -> (Tensor '[2, 3, 4] Float, Tensor '[2, 3, 4] Float)
 ounzip_ xs = ounzip xs
