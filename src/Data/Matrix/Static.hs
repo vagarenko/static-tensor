@@ -94,7 +94,6 @@ import Data.Tensor.Static       ( IsTensor(..), Tensor, TensorConstructor, Norma
                                 , mapSubtensorElems, MapSubtensorElems
                                 , slice, Slice, getSliceElems, GetSliceElems, setSliceElems, SetSliceElems
                                 , mapSliceElems, MapSliceElems
-                                , tensorElem, TensorElem
                                 , withTensor
                                 , NatsFromTo
                                 , scale, Scale)
@@ -305,9 +304,6 @@ type TransposeGo m n e index = GetSliceElems (ReverseIndex index) [1, 1] [m, n] 
 $(genDefunSymbols [''TransposeGo])
 
 -- | Transpose a matrix.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 transpose :: forall m n e.
     (Transpose m n e)
     => Matrix m n e         -- ^ 
@@ -318,6 +314,7 @@ transpose m = generate @'[n, m] @e @([Nat] ~> Constraint) @(TransposeGoSym3 m n 
             (TransposeGo m n e index)
             => Proxy index -> e
         go _ = head $ getSliceElems @(ReverseIndex index) @[1, 1] m
+        {-# INLINE go #-}
 {-# INLINE transpose #-}
 
 -- | Constraints for 'transpose' function.
@@ -387,6 +384,7 @@ instance ( Num e
                 ) =>
                 Proxy index -> e
             go _ = go' @(Index0 index) @(Index1 index)
+            {-# INLINE go #-}
 
             go' :: forall (i :: Nat) (j :: Nat).
                 ( GetRowElems i m n e
@@ -399,6 +397,7 @@ instance ( Num e
                 where
                     irow = getRowElems @i m0
                     jcol = getColElems @j m1
+            {-# INLINE go' #-}
     {-# INLINE mult #-}
 
 -------------------------------------------------------------------------------
@@ -423,6 +422,7 @@ instance ( Num e
                 ) =>
                 Proxy index -> e
             go _ = go' @(Index0 index)
+            {-# INLINE go #-}
 
             go' :: forall (c :: Nat).
                 ( GetColElems c n o e
@@ -434,6 +434,7 @@ instance ( Num e
                 where
                     irow = toList v
                     jcol = getColElems @c m
+            {-# INLINE go' #-}
     {-# INLINE mult #-}
 
 -------------------------------------------------------------------------------
@@ -458,6 +459,7 @@ instance ( Num e
                 ) =>
                 Proxy index -> e
             go _ = go' @(Index0 index)
+            {-# INLINE go #-}
 
             go' :: forall (r :: Nat).
                 ( GetRowElems r m n e
@@ -469,6 +471,7 @@ instance ( Num e
                 where
                     irow = getRowElems @r m
                     jcol = toList v
+            {-# INLINE go' #-}
     {-# INLINE mult #-}
 
 ---------------------------------------------------------------------------------------------------
@@ -492,9 +495,6 @@ type MinorMatrixGo (i :: Nat) (j :: Nat) (n :: Nat) e (index :: [Nat]) =
 $(genDefunSymbols [''MinorMatrixGo])
 
 -- | Minor matrix is a matrix made by deleting @i@-th row and @j@-th column from given square matrix.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 minorMatrix :: forall (i :: Nat) (j :: Nat) (n :: Nat) e.
     (Generate ([n - 1, n - 1]) e ([Nat] ~> Constraint) (MinorMatrixGoSym4 i j n e))
     => Matrix n n e                 -- ^ 
@@ -505,9 +505,11 @@ minorMatrix m = generate @([n - 1, n - 1]) @e @([Nat] ~> Constraint) @(MinorMatr
             (MinorMatrixGo i j n e index) =>
             Proxy index -> e
         go _ = go' @(MinorMatrixNewIndex i (Index0 index)) @(MinorMatrixNewIndex j (Index1 index))
+        {-# INLINE go #-}
 
         go' :: forall (r :: Nat) (c :: Nat). (GetSliceElems [r, c] [1, 1] [n, n] e) => e
         go' = head $ getSliceElems @[r, c] @[1, 1] @[n, n] @e m
+        {-# INLINE go' #-}
 {-# INLINE minorMatrix #-}
 
 -- | Constraint for 'minorMatrix' function.
@@ -550,15 +552,12 @@ instance {-# OVERLAPPABLE #-} (Sign (n - 1)) => Sign n where
 
 type DeterminantGo (n :: Nat) e (j :: Nat) =
     ( Determinant (n - 1) e
-    , TensorElem [0, j] [n, n] e
+    , GetSliceElems [0, j] [1, 1] [n, n] e
     , MinorMatrix 0 j n e
     , Sign j
     )
 $(genDefunSymbols [''DeterminantGo])
 
-
--- | __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this method.
--- Expect it to be slower than most of the functions in the package.
 instance {-# OVERLAPPABLE #-}
     ( Num e
     , IsMatrix n n e
@@ -574,14 +573,12 @@ instance {-# OVERLAPPABLE #-}
                 => Proxy j -> e
             go _ = sign @j * el * determinant (minorMatrix @0 @j @n @e m)
                 where
-                    el = m ^. tensorElem @[0, j]
+                    el = head $ getSliceElems @[0, j] @[1, 1] @[n, n] @e m
+            {-# INLINE go #-}
     {-# INLINE determinant #-}
 
 ---------------------------------------------------------------------------------------------------
 -- | Minor is the determinant of minor matrix.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 minor :: forall (i :: Nat) (j :: Nat) (n :: Nat) e.
     (Minor i j n e)
     => Matrix n n e         -- ^
@@ -598,9 +595,6 @@ type Minor (i :: Nat) (j :: Nat) (n :: Nat) e =
 
 ---------------------------------------------------------------------------------------------------
 -- | @'cofactor' \@i \@j@ is the @'minor' \@i \@j@ multiplied by @(-1) ^ (i + j)@.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 cofactor :: forall (i :: Nat) (j :: Nat) (n :: Nat) e.
     (Cofactor i j n e)
     => Matrix n n e         -- ^
@@ -620,9 +614,6 @@ type CofactorMatrixGo (n :: Nat) e (index :: [Nat]) =
 $(genDefunSymbols [''CofactorMatrixGo])
 
 -- | The matrix formed by all of the cofactors of given square matrix.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 cofactorMatrix :: forall (n :: Nat) e.
     (CofactorMatrix n e)
     => Matrix n n e         -- ^
@@ -633,10 +624,12 @@ cofactorMatrix m = generate @([n, n]) @e @([Nat] ~> Constraint) @(CofactorMatrix
             (Cofactor (Index0 index) (Index1 index) n e) =>
             Proxy index -> e
         go _ = go' @(Index0 index) @(Index1 index)
+        {-# INLINE go #-}
 
         go' :: forall (i :: Nat) (j :: Nat).
             (Cofactor i j n e) => e
         go' = cofactor @i @j @n @e m
+        {-# INLINE go' #-}
 {-# INLINE cofactorMatrix #-}
 
 -- | Constraint for 'cofactorMatrix' function.
@@ -648,8 +641,6 @@ type CofactorMatrix (n :: Nat) e =
 --
 -- @adjugateMatrix = transpose . cofactorMatrix@
 --
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 adjugateMatrix :: forall (n :: Nat) e.
     (AdjugateMatrix n e)
     => Matrix n n e         -- ^
@@ -663,9 +654,6 @@ type AdjugateMatrix (n :: Nat) e =
 
 ---------------------------------------------------------------------------------------------------
 -- | Inverse of the matrix.
---
--- __Note:__ at the moment(GHC-8.2.1) the compiler generates suboptimal core for this function.
--- Expect it to be slower than most of the functions in the package.
 inverse :: forall (n :: Nat) e.
     (Inverse n e)
     => Matrix n n e         -- ^

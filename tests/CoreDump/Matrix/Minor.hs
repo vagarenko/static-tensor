@@ -6,6 +6,5 @@ module CoreDump.Matrix.Minor where
 import Data.Matrix.Static
 import TensorInstances ()
 
--- FIXME: Generates terrible Core.
-minor_ :: Matrix 5 5 Float -> Float
+minor_ :: Matrix 6 6 Float -> Float
 minor_ = minor @0 @0

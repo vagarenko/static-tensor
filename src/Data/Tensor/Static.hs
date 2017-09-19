@@ -134,7 +134,7 @@ module Data.Tensor.Static (
 import Control.Lens                 (Lens', lens, Each(..), traversed)
 import Data.Containers              (MonoZip(..))
 import Data.Function.NAry           (NAry, ApplyNAry(..))
-import Data.Kind                    (Type)
+import Data.Kind                    (Type, Constraint)
 import Data.List                    (intersperse)
 import Data.List.Split              (chunksOf)
 import Data.MonoTraversable         (MonoFunctor(..), MonoFoldable(..), MonoTraversable(..), Element)
@@ -157,9 +157,13 @@ natVal' = fromInteger $ natVal (Proxy @n)
 
 ---------------------------------------------------------------------------------------------------
 -- | Check if all dimensions are greater than 0.
-type family PositiveDims (dims :: [Nat]) :: Bool where
-    PositiveDims '[]       = 'True
-    PositiveDims (d ': ds) = 1 <=? d && PositiveDims ds
+type family PositiveDims (dims :: [Nat]) :: Constraint where
+    PositiveDims '[]       = ()
+    PositiveDims (d ': ds) = PositiveDims' (1 <=? d) ds
+
+type family PositiveDims' (b :: Bool) (dims :: [Nat]) :: Constraint where
+    PositiveDims' 'True  ds = PositiveDims ds
+    PositiveDims' 'False _  = TypeError ('Text "Tensor must have positive dimensions.")
 
 -- | Convert multidimentional @index@ in tensor of shape @dims@ to flat index.
 --   @index@ parameter must have the same length as @dims@.
@@ -239,7 +243,7 @@ type family NatsFromTo' (from :: Nat) (to :: Nat) (fromLTEto :: Bool) :: [Nat] w
 -- | Data family of unboxed tensors. Dimensions of a tensor are represented as type-level list of 
 --   naturals. For instance, @Tensor [3] Float@ is a vector of 3 'Float' elements; @Tensor [4,3] Double@ 
 --   is a matrix with 4 rows 3 columns of 'Double' and so on.
-class (PositiveDims dims ~ 'True, KnownNats dims) => IsTensor (dims :: [Nat]) e where
+class (PositiveDims dims, KnownNats dims) => IsTensor (dims :: [Nat]) e where
     {-# MINIMAL tensor, unsafeFromList, toList #-}
 
     -- | Tensor data constructor for given size and element type.
@@ -871,7 +875,7 @@ impossible_notEnoughTensorElems =
     error "Impossible happend! Not enough elements in the tensor. Please report this bug."
 {-# INLINE impossible_notEnoughTensorElems #-}
 
--- | Worker function for 'sliceElems'.
+-- | Worker function for 'getSliceElems'.
 class GetSliceElemsWrk (elemsInSlice :: [Bool]) where
     getSliceElemsWrk :: [e] -> [e]
 

@@ -6,6 +6,5 @@ module CoreDump.Matrix.Determinant where
 import Data.Matrix.Static
 import TensorInstances ()
 
--- FIXME: Generates terrible Core.
-determinant_ :: Matrix 4 4 Float -> Float
+determinant_ :: Matrix 5 5 Float -> Float
 determinant_ = determinant

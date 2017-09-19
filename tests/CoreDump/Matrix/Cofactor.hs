@@ -6,6 +6,5 @@ module CoreDump.Matrix.Cofactor where
 import Data.Matrix.Static
 import TensorInstances ()
 
--- FIXME: Generates terrible Core.
-cofactor_ :: Matrix 5 5 Float -> Float
+cofactor_ :: Matrix 6 6 Float -> Float
 cofactor_ = cofactor @0 @0
