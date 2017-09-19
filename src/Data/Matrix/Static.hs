@@ -83,7 +83,7 @@ module Data.Matrix.Static (
     , genMatrixInstance
 ) where
 
-import Control.Lens             (Lens', (^.))
+import Control.Lens             (Lens')
 import Data.Kind                (Constraint)
 import Data.Proxy               (Proxy(..))
 import Data.Singletons          (type (~>))
