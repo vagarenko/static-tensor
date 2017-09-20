@@ -1,6 +1,6 @@
 
 ==================== Tidy Core ====================
-2017-09-08 01:36:42.4524841 UTC
+2017-09-20 00:05:22.3842011 UTC
 
 Result size of Tidy Core
   = {terms: 24, types: 39, coercions: 3, joins: 0/0}
@@ -33,8 +33,8 @@ CoreDump.Matrix.RowView.$trModule
 -- RHS size: {terms: 9, types: 27, coercions: 3, joins: 0/0}
 rowView_ :: Matrix 4 4 Float -> Vector 4 Float
 rowView_
-  = \ (s1 :: Data.Tensor.Static.Tensor '[4, 4] Float) ->
-      case s1 `cast` <Co:1> of
+  = \ (eta :: Data.Tensor.Static.Tensor '[4, 4] Float) ->
+      case eta `cast` <Co:1> of
       { TensorInstances.Tensor'4'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
                                          dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 ->
       (TensorInstances.Tensor'4'Float dt dt1 dt2 dt3) `cast` <Co:2>

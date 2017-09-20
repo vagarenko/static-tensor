@@ -1,6 +1,6 @@
 
 ==================== Tidy Core ====================
-2017-09-18 23:01:32.4618635 UTC
+2017-09-19 23:55:00.1476113 UTC
 
 Result size of Tidy Core
   = {terms: 488, types: 817, coercions: 8, joins: 0/0}
@@ -39,7 +39,7 @@ lvl1 = GHC.CString.unpackCString# lvl
 
 -- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
 lvl2 :: GHC.Prim.Addr#
-lvl2 = "static-tensor-0.1.0.0-1bgjq3JOZMoDpQl5pqUrpL"#
+lvl2 = "static-tensor-0.2.0.0-4LYZSU7cIXNFIrMbd1zb5c"#
 
 -- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
 lvl3 :: [Char]
