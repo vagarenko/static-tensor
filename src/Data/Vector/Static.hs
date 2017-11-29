@@ -47,6 +47,8 @@ module Data.Vector.Static (
     , dot
     , Dot
     , cross
+    , toHomogenous
+    , fromHomogenous
     -- ** Generating vector instances
     , genVectorInstance
 ) where
@@ -143,11 +145,23 @@ type Dot (n :: Nat) e =
 ---------------------------------------------------------------------------------------------------
 -- | Cross product is only defined for 3-dimensional vectors.
 cross :: (Num e, IsVector 3 e) => Vector 3 e -> Vector 3 e -> Vector 3 e
-cross t0 t1 =
-    withTensor t0 $ \x0 y0 z0 ->
-        withTensor t1 $ \x1 y1 z1 ->
+cross v0 v1 =
+    withTensor v0 $ \x0 y0 z0 ->
+        withTensor v1 $ \x1 y1 z1 ->
             vector @3 (y0 * z1 - z0 * y1) (z0 * x1 - x0 * z1) (x0 * y1 - y0 * x1)
 {-# INLINE cross #-}
+
+---------------------------------------------------------------------------------------------------
+-- | Convert 3-dimensional vector to 4-dimensional vector by setting the last element to @1@.
+toHomogenous :: (Num e, IsVector 3 e, IsVector 4 e) => Vector 3 e -> Vector 4 e
+toHomogenous v = withTensor v $ \x y z -> vector @4 x y z 1
+{-# INLINE toHomogenous #-}
+
+-- | Convert 4-dimensional vector to 3-dimensional vector by dividing first 3 coords by the last.
+--   The last element must not be zero!
+fromHomogenous :: (Fractional e, IsVector 3 e, IsVector 4 e) => Vector 4 e -> Vector 3 e
+fromHomogenous v = withTensor v $ \x y z w -> scale (vector @3 x y z) (1 / w)
+{-# INLINE fromHomogenous #-}
 
 ---------------------------------------------------------------------------------------------------
 -- | Generate instance of a vector.

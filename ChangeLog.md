@@ -1,5 +1,9 @@
 # Revision history for static-tensor
 
+## Next
+
+* Added `fromHomogenous` and `toHomogenous` vector functions.
+
 ## 0.2.0.0  -- 2017-09-20
 
 * **BREAKING:** Changed `PositiveDims` type family to return `Constraint` instead of `Bool`

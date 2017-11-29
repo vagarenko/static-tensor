@@ -1,5 +1,5 @@
 name:                static-tensor
-version:             0.2.0.0
+version:             0.2.1.0
 synopsis:            Tensors of statically known size
 description:         
     This library provides a toolkit for working with tensors of statically known size and element's type.
