@@ -40,6 +40,7 @@ module Data.Vector.Static (
     , NormalizedVector
     , Normalize
     , unNormalizedVector
+    , norm
     , vectorLenSquare
     , VectorLenSquare
     , vectorLen
@@ -127,6 +128,11 @@ type Normalize (n :: Nat) e =
     ( VectorLen n e
     , Scale '[n] e
     )
+
+-- | Normalize vector but don't wrap it in 'NormalizedVector'.
+norm :: (Normalize n e) => Vector n e -> Vector n e
+norm = unNormalizedVector . normalize
+{-# INLINE norm #-}
 
 -- | Dot product of two vectors.
 dot :: (Dot n e) => Vector n e -> Vector n e -> e

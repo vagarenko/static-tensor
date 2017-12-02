@@ -2,6 +2,7 @@
 
 ## Next
 
+* Added `norm` vector function.
 * Added `fromHomogenous` and `toHomogenous` vector functions.
 
 ## 0.2.0.0  -- 2017-09-20
