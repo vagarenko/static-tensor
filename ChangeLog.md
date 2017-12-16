@@ -1,6 +1,6 @@
 # Revision history for static-tensor
 
-## Next
+## 0.2.1.0  -- 2017-12-17
 
 * Added `norm` vector function.
 * Added `fromHomogenous` and `toHomogenous` vector functions.
