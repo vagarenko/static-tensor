@@ -671,4 +671,4 @@ genMatrixInstance :: Int       -- ^ Number of rows.
                   -> Int       -- ^ Number of columns.
                   -> Name      -- ^ Type of elements.
                   -> Q [Dec]
-genMatrixInstance m n elemTypeName = genTensorInstance (N.fromList [m, n]) elemTypeName
+genMatrixInstance m n = genTensorInstance (N.fromList [m, n])

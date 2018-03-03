@@ -8,8 +8,6 @@
 {-# LANGUAGE FlexibleContexts      #-}           
 {-# LANGUAGE ScopedTypeVariables   #-}
 {-# LANGUAGE DeriveGeneric         #-}
-{-# LANGUAGE DeriveAnyClass        #-}
-{-# LANGUAGE TemplateHaskell       #-}
 {-# LANGUAGE StandaloneDeriving    #-}           
 {-# LANGUAGE UndecidableInstances  #-}
 {-# LANGUAGE TypeApplications      #-}
@@ -174,4 +172,4 @@ fromHomogenous v = withTensor v $ \x y z w -> scale (vector @3 x y z) (1 / w)
 genVectorInstance :: Int       -- ^ Size of the vector.
                   -> Name      -- ^ Type of elements.
                   -> Q [Dec]
-genVectorInstance size elemTypeName = genTensorInstance (N.fromList [size]) elemTypeName
+genVectorInstance size = genTensorInstance (N.fromList [size])

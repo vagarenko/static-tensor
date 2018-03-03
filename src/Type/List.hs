@@ -7,9 +7,6 @@
 {-# LANGUAGE FlexibleInstances       #-}
 {-# LANGUAGE FlexibleContexts        #-}           
 {-# LANGUAGE ScopedTypeVariables     #-}
-{-# LANGUAGE DeriveGeneric           #-}
-{-# LANGUAGE DeriveAnyClass          #-}
-{-# LANGUAGE StandaloneDeriving      #-}           
 {-# LANGUAGE UndecidableInstances    #-}
 {-# LANGUAGE TypeApplications        #-}
 {-# LANGUAGE TypeInType              #-}
@@ -20,7 +17,6 @@
 {-# LANGUAGE UndecidableSuperClasses #-}
 {-# LANGUAGE RankNTypes              #-}
 {-# LANGUAGE InstanceSigs            #-}
-{-# LANGUAGE TemplateHaskell         #-}
 
 -----------------------------------------------------------------------------
 -- |
