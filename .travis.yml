@@ -79,7 +79,7 @@ script:
 
  # build & run tests, build benchmarks
  - cabal new-build -w ${HC} ${TEST} ${BENCH} all
- - if [ "x$TEST" = "x--enable-tests" ]; then dist-newstyle/build/x86_64-linux/ghc-8.2.1/static-tensor-0.2.0.0/c/coreDump/build/coreDump/coreDump; fi
+ - if [ "x$TEST" = "x--enable-tests" ]; then dist-newstyle/build/x86_64-linux/ghc-8.2.2/static-tensor-0.2.1.0/c/coreDump/build/coreDump/coreDump; fi
 
  # haddock
  - rm -rf ./dist-newstyle

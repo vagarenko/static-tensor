@@ -1,0 +1,64 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:56:57.0861597 UTC
+
+Result size of Tidy Core
+  = {terms: 31, types: 46, coercions: 39, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MinorMatrix.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.MinorMatrix.$trModule2
+  = "CoreDump.Matrix.MinorMatrix"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MinorMatrix.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.MinorMatrix.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.MinorMatrix.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MinorMatrix.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.MinorMatrix.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MinorMatrix.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.MinorMatrix.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.MinorMatrix.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MinorMatrix.$trModule :: GHC.Types.Module
+CoreDump.Matrix.MinorMatrix.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.MinorMatrix.$trModule3
+      CoreDump.Matrix.MinorMatrix.$trModule1
+
+-- RHS size: {terms: 14, types: 21, coercions: 20, joins: 0/0}
+CoreDump.Matrix.MinorMatrix.$sminorMatrix
+  :: Matrix 4 4 Float
+     -> Matrix (4 GHC.TypeNats.- 1) (4 GHC.TypeNats.- 1) Float
+CoreDump.Matrix.MinorMatrix.$sminorMatrix
+  = \ (m :: Matrix 4 4 Float) ->
+      case m `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 ->
+      (TensorInstances.Tensor'3'3'Float
+         dt5 dt6 dt7 dt9 dt10 dt11 dt13 dt14 dt15)
+      `cast` <Co:19>
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 19, joins: 0/0}
+minorMatrix_ :: Matrix 4 4 Float -> Matrix 3 3 Float
+minorMatrix_
+  = CoreDump.Matrix.MinorMatrix.$sminorMatrix `cast` <Co:19>
+
+
+------ Local rules for imported ids --------
+"SPEC/CoreDump.Matrix.MinorMatrix minorMatrix @ 0 @ 0 @ 4 @ Float"
+    forall ($d(%,%)
+              :: Data.Tensor.Static.Generate
+                   '[4 GHC.TypeNats.- 1, 4 GHC.TypeNats.- 1]
+                   Float
+                   ([GHC.Types.Nat] Data.Singletons.~> Constraint)
+                   (Data.Matrix.Static.MinorMatrixGoSym4 0 0 4 Float)).
+      minorMatrix @ 0 @ 0 @ 4 @ Float $d(%,%)
+      = CoreDump.Matrix.MinorMatrix.$sminorMatrix
+

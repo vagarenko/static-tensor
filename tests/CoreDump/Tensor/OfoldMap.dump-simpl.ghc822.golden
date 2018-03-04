@@ -1,0 +1,148 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:52:26.9567092 UTC
+
+Result size of Tidy Core
+  = {terms: 144, types: 94, coercions: 1, joins: 0/0}
+
+-- RHS size: {terms: 129, types: 69, coercions: 1, joins: 0/0}
+ofoldMap_
+  :: forall w.
+     Monoid w =>
+     (Float -> w) -> Tensor '[2, 3, 4] Float -> w
+ofoldMap_
+  = \ (@ w)
+      ($dMonoid :: Monoid w)
+      (f :: Float -> w)
+      (eta :: Tensor '[2, 3, 4] Float) ->
+      case eta `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      mappend
+        @ w
+        $dMonoid
+        (f (GHC.Types.F# dt))
+        (mappend
+           @ w
+           $dMonoid
+           (f (GHC.Types.F# dt1))
+           (mappend
+              @ w
+              $dMonoid
+              (f (GHC.Types.F# dt2))
+              (mappend
+                 @ w
+                 $dMonoid
+                 (f (GHC.Types.F# dt3))
+                 (mappend
+                    @ w
+                    $dMonoid
+                    (f (GHC.Types.F# dt4))
+                    (mappend
+                       @ w
+                       $dMonoid
+                       (f (GHC.Types.F# dt5))
+                       (mappend
+                          @ w
+                          $dMonoid
+                          (f (GHC.Types.F# dt6))
+                          (mappend
+                             @ w
+                             $dMonoid
+                             (f (GHC.Types.F# dt7))
+                             (mappend
+                                @ w
+                                $dMonoid
+                                (f (GHC.Types.F# dt8))
+                                (mappend
+                                   @ w
+                                   $dMonoid
+                                   (f (GHC.Types.F# dt9))
+                                   (mappend
+                                      @ w
+                                      $dMonoid
+                                      (f (GHC.Types.F# dt10))
+                                      (mappend
+                                         @ w
+                                         $dMonoid
+                                         (f (GHC.Types.F# dt11))
+                                         (mappend
+                                            @ w
+                                            $dMonoid
+                                            (f (GHC.Types.F# dt12))
+                                            (mappend
+                                               @ w
+                                               $dMonoid
+                                               (f (GHC.Types.F# dt13))
+                                               (mappend
+                                                  @ w
+                                                  $dMonoid
+                                                  (f (GHC.Types.F# dt14))
+                                                  (mappend
+                                                     @ w
+                                                     $dMonoid
+                                                     (f (GHC.Types.F# dt15))
+                                                     (mappend
+                                                        @ w
+                                                        $dMonoid
+                                                        (f (GHC.Types.F# dt16))
+                                                        (mappend
+                                                           @ w
+                                                           $dMonoid
+                                                           (f (GHC.Types.F# dt17))
+                                                           (mappend
+                                                              @ w
+                                                              $dMonoid
+                                                              (f (GHC.Types.F# dt18))
+                                                              (mappend
+                                                                 @ w
+                                                                 $dMonoid
+                                                                 (f (GHC.Types.F# dt19))
+                                                                 (mappend
+                                                                    @ w
+                                                                    $dMonoid
+                                                                    (f (GHC.Types.F# dt20))
+                                                                    (mappend
+                                                                       @ w
+                                                                       $dMonoid
+                                                                       (f (GHC.Types.F# dt21))
+                                                                       (mappend
+                                                                          @ w
+                                                                          $dMonoid
+                                                                          (f (GHC.Types.F# dt22))
+                                                                          (mappend
+                                                                             @ w
+                                                                             $dMonoid
+                                                                             (f (GHC.Types.F# dt23))
+                                                                             (mempty
+                                                                                @ w
+                                                                                $dMonoid))))))))))))))))))))))))
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OfoldMap.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.OfoldMap.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OfoldMap.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.OfoldMap.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.OfoldMap.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OfoldMap.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.OfoldMap.$trModule2 = "CoreDump.Tensor.OfoldMap"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OfoldMap.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.OfoldMap.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.OfoldMap.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.OfoldMap.$trModule :: GHC.Types.Module
+CoreDump.Tensor.OfoldMap.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.OfoldMap.$trModule3
+      CoreDump.Tensor.OfoldMap.$trModule1
+
+

@@ -1,0 +1,91 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:53:26.9441403 UTC
+
+Result size of Tidy Core
+  = {terms: 50, types: 145, coercions: 105, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSlice.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.SetSlice.$trModule2 = "CoreDump.Tensor.SetSlice"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSlice.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.SetSlice.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.SetSlice.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSlice.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.SetSlice.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSlice.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.SetSlice.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.SetSlice.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.SetSlice.$trModule :: GHC.Types.Module
+CoreDump.Tensor.SetSlice.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.SetSlice.$trModule3
+      CoreDump.Tensor.SetSlice.$trModule1
+
+-- RHS size: {terms: 33, types: 61, coercions: 41, joins: 0/0}
+CoreDump.Tensor.SetSlice.$ssetSlice
+  :: Tensor '[2, 3, 4] Float
+     -> Tensor (NormalizeDims '[2, 2, 2]) Float
+     -> Tensor '[2, 3, 4] Float
+CoreDump.Tensor.SetSlice.$ssetSlice
+  = \ (t :: Tensor '[2, 3, 4] Float)
+      (st :: Tensor (NormalizeDims '[2, 2, 2]) Float) ->
+      case t `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case st `cast` <Co:38> of
+      { TensorInstances.Tensor'2'2'2'Float dt29 dt30 dt31 dt32 dt33 dt34
+                                           dt35 dt36 ->
+      (TensorInstances.Tensor'2'3'4'Float
+         dt
+         dt1
+         dt2
+         dt3
+         dt4
+         dt5
+         dt29
+         dt30
+         dt8
+         dt9
+         dt31
+         dt32
+         dt12
+         dt13
+         dt14
+         dt15
+         dt16
+         dt17
+         dt33
+         dt34
+         dt20
+         dt21
+         dt35
+         dt36)
+      `cast` <Co:2>
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 64, joins: 0/0}
+setSlice_
+  :: Tensor '[2, 3, 4] Float
+     -> Tensor '[2, 2, 2] Float -> Tensor '[2, 3, 4] Float
+setSlice_ = CoreDump.Tensor.SetSlice.$ssetSlice `cast` <Co:64>
+
+
+------ Local rules for imported ids --------
+"SPEC/CoreDump.Tensor.SetSlice setSlice @ '[0, 1, 2] @ '[2, 2,
+                                                        2] @ '[2, 3, 4] @ Float"
+    forall ($d(%,,%)
+              :: SetSlice '[0, 1, 2] '[2, 2, 2] '[2, 3, 4] Float).
+      setSlice @ '[0, 1, 2] @ '[2, 2, 2] @ '[2, 3, 4] @ Float $d(%,,%)
+      = CoreDump.Tensor.SetSlice.$ssetSlice
+

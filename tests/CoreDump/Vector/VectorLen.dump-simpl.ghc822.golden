@@ -1,0 +1,49 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:55:03.518664 UTC
+
+Result size of Tidy Core
+  = {terms: 36, types: 17, coercions: 1, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLen.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Vector.VectorLen.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLen.$trModule3 :: GHC.Types.TrName
+CoreDump.Vector.VectorLen.$trModule3
+  = GHC.Types.TrNameS CoreDump.Vector.VectorLen.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLen.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Vector.VectorLen.$trModule2 = "CoreDump.Vector.VectorLen"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLen.$trModule1 :: GHC.Types.TrName
+CoreDump.Vector.VectorLen.$trModule1
+  = GHC.Types.TrNameS CoreDump.Vector.VectorLen.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.VectorLen.$trModule :: GHC.Types.Module
+CoreDump.Vector.VectorLen.$trModule
+  = GHC.Types.Module
+      CoreDump.Vector.VectorLen.$trModule3
+      CoreDump.Vector.VectorLen.$trModule1
+
+-- RHS size: {terms: 21, types: 8, coercions: 1, joins: 0/0}
+vectorLen_ :: Vector 4 Float -> Float
+vectorLen_
+  = \ (x :: Vector 4 Float) ->
+      case x `cast` <Co:1> of
+      { TensorInstances.Tensor'4'Float dt dt1 dt2 dt3 ->
+      GHC.Types.F#
+        (GHC.Prim.sqrtFloat#
+           (GHC.Prim.plusFloat#
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat# dt3 dt3) (GHC.Prim.timesFloat# dt2 dt2))
+                 (GHC.Prim.timesFloat# dt1 dt1))
+              (GHC.Prim.timesFloat# dt dt)))
+      }
+
+

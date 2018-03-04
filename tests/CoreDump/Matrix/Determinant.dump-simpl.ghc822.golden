@@ -1,0 +1,453 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:57:17.8163454 UTC
+
+Result size of Tidy Core
+  = {terms: 693, types: 40, coercions: 1, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Determinant.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.Determinant.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Determinant.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.Determinant.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.Determinant.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Determinant.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.Determinant.$trModule2
+  = "CoreDump.Matrix.Determinant"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Determinant.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.Determinant.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.Determinant.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Determinant.$trModule :: GHC.Types.Module
+CoreDump.Matrix.Determinant.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.Determinant.$trModule3
+      CoreDump.Matrix.Determinant.$trModule1
+
+-- RHS size: {terms: 678, types: 30, coercions: 1, joins: 0/0}
+determinant_ :: Matrix 5 5 Float -> Float
+determinant_
+  = \ (m :: Matrix 5 5 Float) ->
+      case m `cast` <Co:1> of
+      { TensorInstances.Tensor'5'5'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                         dt20 dt21 dt22 dt23 dt24 ->
+      GHC.Types.F#
+        (GHC.Prim.plusFloat#
+           (GHC.Prim.timesFloat#
+              dt
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat#
+                    dt6
+                    (GHC.Prim.plusFloat#
+                       (GHC.Prim.minusFloat#
+                          (GHC.Prim.timesFloat#
+                             dt12
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat# dt18 dt24) (GHC.Prim.timesFloat# dt19 dt23)))
+                          (GHC.Prim.timesFloat#
+                             dt13
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat# dt17 dt24)
+                                (GHC.Prim.timesFloat# dt19 dt22))))
+                       (GHC.Prim.timesFloat#
+                          dt14
+                          (GHC.Prim.minusFloat#
+                             (GHC.Prim.timesFloat# dt17 dt23)
+                             (GHC.Prim.timesFloat# dt18 dt22)))))
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat#
+                       (GHC.Prim.timesFloat# -1.0# dt7)
+                       (GHC.Prim.plusFloat#
+                          (GHC.Prim.minusFloat#
+                             (GHC.Prim.timesFloat#
+                                dt11
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt18 dt24)
+                                   (GHC.Prim.timesFloat# dt19 dt23)))
+                             (GHC.Prim.timesFloat#
+                                dt13
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt16 dt24)
+                                   (GHC.Prim.timesFloat# dt19 dt21))))
+                          (GHC.Prim.timesFloat#
+                             dt14
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat# dt16 dt23)
+                                (GHC.Prim.timesFloat# dt18 dt21)))))
+                    (GHC.Prim.plusFloat#
+                       (GHC.Prim.timesFloat#
+                          dt8
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat#
+                                   dt11
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt17 dt24)
+                                      (GHC.Prim.timesFloat# dt19 dt22)))
+                                (GHC.Prim.timesFloat#
+                                   dt12
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt16 dt24)
+                                      (GHC.Prim.timesFloat# dt19 dt21))))
+                             (GHC.Prim.timesFloat#
+                                dt14
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt16 dt22)
+                                   (GHC.Prim.timesFloat# dt17 dt21)))))
+                       (GHC.Prim.timesFloat#
+                          (GHC.Prim.timesFloat# -1.0# dt9)
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat#
+                                   dt11
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt17 dt23)
+                                      (GHC.Prim.timesFloat# dt18 dt22)))
+                                (GHC.Prim.timesFloat#
+                                   dt12
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt16 dt23)
+                                      (GHC.Prim.timesFloat# dt18 dt21))))
+                             (GHC.Prim.timesFloat#
+                                dt13
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt16 dt22)
+                                   (GHC.Prim.timesFloat# dt17 dt21)))))))))
+           (GHC.Prim.plusFloat#
+              (GHC.Prim.timesFloat#
+                 (GHC.Prim.timesFloat# -1.0# dt1)
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat#
+                       dt5
+                       (GHC.Prim.plusFloat#
+                          (GHC.Prim.minusFloat#
+                             (GHC.Prim.timesFloat#
+                                dt12
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt18 dt24)
+                                   (GHC.Prim.timesFloat# dt19 dt23)))
+                             (GHC.Prim.timesFloat#
+                                dt13
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt17 dt24)
+                                   (GHC.Prim.timesFloat# dt19 dt22))))
+                          (GHC.Prim.timesFloat#
+                             dt14
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat# dt17 dt23)
+                                (GHC.Prim.timesFloat# dt18 dt22)))))
+                    (GHC.Prim.plusFloat#
+                       (GHC.Prim.timesFloat#
+                          (GHC.Prim.timesFloat# -1.0# dt7)
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat#
+                                   dt10
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt18 dt24)
+                                      (GHC.Prim.timesFloat# dt19 dt23)))
+                                (GHC.Prim.timesFloat#
+                                   dt13
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt15 dt24)
+                                      (GHC.Prim.timesFloat# dt19 dt20))))
+                             (GHC.Prim.timesFloat#
+                                dt14
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt15 dt23)
+                                   (GHC.Prim.timesFloat# dt18 dt20)))))
+                       (GHC.Prim.plusFloat#
+                          (GHC.Prim.timesFloat#
+                             dt8
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat#
+                                      dt10
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt17 dt24)
+                                         (GHC.Prim.timesFloat# dt19 dt22)))
+                                   (GHC.Prim.timesFloat#
+                                      dt12
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt24)
+                                         (GHC.Prim.timesFloat# dt19 dt20))))
+                                (GHC.Prim.timesFloat#
+                                   dt14
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt15 dt22)
+                                      (GHC.Prim.timesFloat# dt17 dt20)))))
+                          (GHC.Prim.timesFloat#
+                             (GHC.Prim.timesFloat# -1.0# dt9)
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat#
+                                      dt10
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt17 dt23)
+                                         (GHC.Prim.timesFloat# dt18 dt22)))
+                                   (GHC.Prim.timesFloat#
+                                      dt12
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt23)
+                                         (GHC.Prim.timesFloat# dt18 dt20))))
+                                (GHC.Prim.timesFloat#
+                                   dt13
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt15 dt22)
+                                      (GHC.Prim.timesFloat# dt17 dt20)))))))))
+              (GHC.Prim.plusFloat#
+                 (GHC.Prim.timesFloat#
+                    dt2
+                    (GHC.Prim.plusFloat#
+                       (GHC.Prim.timesFloat#
+                          dt5
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.minusFloat#
+                                (GHC.Prim.timesFloat#
+                                   dt11
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt18 dt24)
+                                      (GHC.Prim.timesFloat# dt19 dt23)))
+                                (GHC.Prim.timesFloat#
+                                   dt13
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt16 dt24)
+                                      (GHC.Prim.timesFloat# dt19 dt21))))
+                             (GHC.Prim.timesFloat#
+                                dt14
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat# dt16 dt23)
+                                   (GHC.Prim.timesFloat# dt18 dt21)))))
+                       (GHC.Prim.plusFloat#
+                          (GHC.Prim.timesFloat#
+                             (GHC.Prim.timesFloat# -1.0# dt6)
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat#
+                                      dt10
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt18 dt24)
+                                         (GHC.Prim.timesFloat# dt19 dt23)))
+                                   (GHC.Prim.timesFloat#
+                                      dt13
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt24)
+                                         (GHC.Prim.timesFloat# dt19 dt20))))
+                                (GHC.Prim.timesFloat#
+                                   dt14
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt15 dt23)
+                                      (GHC.Prim.timesFloat# dt18 dt20)))))
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.timesFloat#
+                                dt8
+                                (GHC.Prim.plusFloat#
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat#
+                                         dt10
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt16 dt24)
+                                            (GHC.Prim.timesFloat# dt19 dt21)))
+                                      (GHC.Prim.timesFloat#
+                                         dt11
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt24)
+                                            (GHC.Prim.timesFloat# dt19 dt20))))
+                                   (GHC.Prim.timesFloat#
+                                      dt14
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt21)
+                                         (GHC.Prim.timesFloat# dt16 dt20)))))
+                             (GHC.Prim.timesFloat#
+                                (GHC.Prim.timesFloat# -1.0# dt9)
+                                (GHC.Prim.plusFloat#
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat#
+                                         dt10
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt16 dt23)
+                                            (GHC.Prim.timesFloat# dt18 dt21)))
+                                      (GHC.Prim.timesFloat#
+                                         dt11
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt23)
+                                            (GHC.Prim.timesFloat# dt18 dt20))))
+                                   (GHC.Prim.timesFloat#
+                                      dt13
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt21)
+                                         (GHC.Prim.timesFloat# dt16 dt20)))))))))
+                 (GHC.Prim.plusFloat#
+                    (GHC.Prim.timesFloat#
+                       (GHC.Prim.timesFloat# -1.0# dt3)
+                       (GHC.Prim.plusFloat#
+                          (GHC.Prim.timesFloat#
+                             dt5
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat#
+                                      dt11
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt17 dt24)
+                                         (GHC.Prim.timesFloat# dt19 dt22)))
+                                   (GHC.Prim.timesFloat#
+                                      dt12
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt16 dt24)
+                                         (GHC.Prim.timesFloat# dt19 dt21))))
+                                (GHC.Prim.timesFloat#
+                                   dt14
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt16 dt22)
+                                      (GHC.Prim.timesFloat# dt17 dt21)))))
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.timesFloat#
+                                (GHC.Prim.timesFloat# -1.0# dt6)
+                                (GHC.Prim.plusFloat#
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat#
+                                         dt10
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt17 dt24)
+                                            (GHC.Prim.timesFloat# dt19 dt22)))
+                                      (GHC.Prim.timesFloat#
+                                         dt12
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt24)
+                                            (GHC.Prim.timesFloat# dt19 dt20))))
+                                   (GHC.Prim.timesFloat#
+                                      dt14
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt22)
+                                         (GHC.Prim.timesFloat# dt17 dt20)))))
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.timesFloat#
+                                   dt7
+                                   (GHC.Prim.plusFloat#
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat#
+                                            dt10
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt16 dt24)
+                                               (GHC.Prim.timesFloat# dt19 dt21)))
+                                         (GHC.Prim.timesFloat#
+                                            dt11
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt15 dt24)
+                                               (GHC.Prim.timesFloat# dt19 dt20))))
+                                      (GHC.Prim.timesFloat#
+                                         dt14
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt21)
+                                            (GHC.Prim.timesFloat# dt16 dt20)))))
+                                (GHC.Prim.timesFloat#
+                                   (GHC.Prim.timesFloat# -1.0# dt9)
+                                   (GHC.Prim.plusFloat#
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat#
+                                            dt10
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt16 dt22)
+                                               (GHC.Prim.timesFloat# dt17 dt21)))
+                                         (GHC.Prim.timesFloat#
+                                            dt11
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt15 dt22)
+                                               (GHC.Prim.timesFloat# dt17 dt20))))
+                                      (GHC.Prim.timesFloat#
+                                         dt12
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt21)
+                                            (GHC.Prim.timesFloat# dt16 dt20)))))))))
+                    (GHC.Prim.timesFloat#
+                       dt4
+                       (GHC.Prim.plusFloat#
+                          (GHC.Prim.timesFloat#
+                             dt5
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.minusFloat#
+                                   (GHC.Prim.timesFloat#
+                                      dt11
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt17 dt23)
+                                         (GHC.Prim.timesFloat# dt18 dt22)))
+                                   (GHC.Prim.timesFloat#
+                                      dt12
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt16 dt23)
+                                         (GHC.Prim.timesFloat# dt18 dt21))))
+                                (GHC.Prim.timesFloat#
+                                   dt13
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat# dt16 dt22)
+                                      (GHC.Prim.timesFloat# dt17 dt21)))))
+                          (GHC.Prim.plusFloat#
+                             (GHC.Prim.timesFloat#
+                                (GHC.Prim.timesFloat# -1.0# dt6)
+                                (GHC.Prim.plusFloat#
+                                   (GHC.Prim.minusFloat#
+                                      (GHC.Prim.timesFloat#
+                                         dt10
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt17 dt23)
+                                            (GHC.Prim.timesFloat# dt18 dt22)))
+                                      (GHC.Prim.timesFloat#
+                                         dt12
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt23)
+                                            (GHC.Prim.timesFloat# dt18 dt20))))
+                                   (GHC.Prim.timesFloat#
+                                      dt13
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat# dt15 dt22)
+                                         (GHC.Prim.timesFloat# dt17 dt20)))))
+                             (GHC.Prim.plusFloat#
+                                (GHC.Prim.timesFloat#
+                                   dt7
+                                   (GHC.Prim.plusFloat#
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat#
+                                            dt10
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt16 dt23)
+                                               (GHC.Prim.timesFloat# dt18 dt21)))
+                                         (GHC.Prim.timesFloat#
+                                            dt11
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt15 dt23)
+                                               (GHC.Prim.timesFloat# dt18 dt20))))
+                                      (GHC.Prim.timesFloat#
+                                         dt13
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt21)
+                                            (GHC.Prim.timesFloat# dt16 dt20)))))
+                                (GHC.Prim.timesFloat#
+                                   (GHC.Prim.timesFloat# -1.0# dt8)
+                                   (GHC.Prim.plusFloat#
+                                      (GHC.Prim.minusFloat#
+                                         (GHC.Prim.timesFloat#
+                                            dt10
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt16 dt22)
+                                               (GHC.Prim.timesFloat# dt17 dt21)))
+                                         (GHC.Prim.timesFloat#
+                                            dt11
+                                            (GHC.Prim.minusFloat#
+                                               (GHC.Prim.timesFloat# dt15 dt22)
+                                               (GHC.Prim.timesFloat# dt17 dt20))))
+                                      (GHC.Prim.timesFloat#
+                                         dt12
+                                         (GHC.Prim.minusFloat#
+                                            (GHC.Prim.timesFloat# dt15 dt21)
+                                            (GHC.Prim.timesFloat# dt16 dt20)))))))))))))
+      }
+
+

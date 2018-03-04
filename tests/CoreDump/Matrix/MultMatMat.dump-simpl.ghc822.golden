@@ -1,0 +1,163 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:56:37.527041 UTC
+
+Result size of Tidy Core
+  = {terms: 266, types: 110, coercions: 28, joins: 0/0}
+
+-- RHS size: {terms: 249, types: 54, coercions: 12, joins: 0/0}
+CoreDump.Matrix.MultMatMat.multMatMat_1
+  :: Data.Tensor.Static.Tensor '[4, 4] Float
+     -> Data.Tensor.Static.Tensor '[4, 4] Float
+     -> Data.Tensor.Static.Tensor (MatrixMultDims '[4, 4] '[4, 4]) Float
+CoreDump.Matrix.MultMatMat.multMatMat_1
+  = \ (m0 :: Data.Tensor.Static.Tensor '[4, 4] Float)
+      (m1 :: Data.Tensor.Static.Tensor '[4, 4] Float) ->
+      case m0 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 ->
+      case m1 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt16 dt17 dt18 dt19 dt20 dt21
+                                         dt22 dt23 dt24 dt25 dt26 dt27 dt28 dt29 dt30 dt31 ->
+      (TensorInstances.Tensor'4'4'Float
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt16)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt20)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt24) (GHC.Prim.timesFloat# dt3 dt28))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt17)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt21)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt25) (GHC.Prim.timesFloat# dt3 dt29))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt18)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt22)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt26) (GHC.Prim.timesFloat# dt3 dt30))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt19)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt23)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt27) (GHC.Prim.timesFloat# dt3 dt31))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt4 dt16)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt5 dt20)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt6 dt24) (GHC.Prim.timesFloat# dt7 dt28))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt4 dt17)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt5 dt21)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt6 dt25) (GHC.Prim.timesFloat# dt7 dt29))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt4 dt18)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt5 dt22)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt6 dt26) (GHC.Prim.timesFloat# dt7 dt30))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt4 dt19)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt5 dt23)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt6 dt27) (GHC.Prim.timesFloat# dt7 dt31))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt8 dt16)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt9 dt20)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt10 dt24)
+                  (GHC.Prim.timesFloat# dt11 dt28))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt8 dt17)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt9 dt21)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt10 dt25)
+                  (GHC.Prim.timesFloat# dt11 dt29))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt8 dt18)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt9 dt22)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt10 dt26)
+                  (GHC.Prim.timesFloat# dt11 dt30))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt8 dt19)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt9 dt23)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt10 dt27)
+                  (GHC.Prim.timesFloat# dt11 dt31))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt12 dt16)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt13 dt20)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt14 dt24)
+                  (GHC.Prim.timesFloat# dt15 dt28))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt12 dt17)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt13 dt21)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt14 dt25)
+                  (GHC.Prim.timesFloat# dt15 dt29))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt12 dt18)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt13 dt22)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt14 dt26)
+                  (GHC.Prim.timesFloat# dt15 dt30))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt12 dt19)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt13 dt23)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt14 dt27)
+                  (GHC.Prim.timesFloat# dt15 dt31)))))
+      `cast` <Co:10>
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 16, joins: 0/0}
+multMatMat_
+  :: Matrix 4 4 Float -> Matrix 4 4 Float -> Matrix 4 4 Float
+multMatMat_
+  = CoreDump.Matrix.MultMatMat.multMatMat_1 `cast` <Co:16>
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.MultMatMat.$trModule2
+  = "CoreDump.Matrix.MultMatMat"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.MultMatMat.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.MultMatMat.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.MultMatMat.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.MultMatMat.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.MultMatMat.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultMatMat.$trModule :: GHC.Types.Module
+CoreDump.Matrix.MultMatMat.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.MultMatMat.$trModule3
+      CoreDump.Matrix.MultMatMat.$trModule1
+
+

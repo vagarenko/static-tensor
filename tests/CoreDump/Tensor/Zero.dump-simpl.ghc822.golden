@@ -1,0 +1,65 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:54:41.8404241 UTC
+
+Result size of Tidy Core
+  = {terms: 42, types: 19, coercions: 2, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Zero.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Zero.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Zero.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Zero.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Zero.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Zero.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Zero.$trModule2 = "CoreDump.Tensor.Zero"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Zero.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Zero.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Zero.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Zero.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Zero.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Zero.$trModule3 CoreDump.Tensor.Zero.$trModule1
+
+-- RHS size: {terms: 25, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Zero.zero_1 :: TensorInstances.R:Tensor:Float27
+CoreDump.Tensor.Zero.zero_1
+  = TensorInstances.Tensor'2'3'4'Float
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+
+-- RHS size: {terms: 1, types: 0, coercions: 2, joins: 0/0}
+zero_ :: Tensor '[2, 3, 4] Float
+zero_ = CoreDump.Tensor.Zero.zero_1 `cast` <Co:2>
+
+

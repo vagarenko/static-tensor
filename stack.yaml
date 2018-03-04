@@ -2,6 +2,6 @@ packages:
 - location: .
 flags: {}
 extra-package-dbs: []
-compiler: ghc-8.2.1
+compiler: ghc-8.2.2
 compiler-check: match-exact
-resolver: nightly-2017-08-29
+resolver: lts-10.7

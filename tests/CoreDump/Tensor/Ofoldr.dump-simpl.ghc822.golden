@@ -1,0 +1,71 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:52:32.4180215 UTC
+
+Result size of Tidy Core
+  = {terms: 95, types: 69, coercions: 1, joins: 0/0}
+
+-- RHS size: {terms: 80, types: 44, coercions: 1, joins: 0/0}
+ofoldr_
+  :: forall b. (Float -> b -> b) -> b -> Tensor '[2, 3, 4] Float -> b
+ofoldr_
+  = \ (@ b)
+      (f :: Float -> b -> b)
+      (z :: b)
+      (x :: Tensor '[2, 3, 4] Float) ->
+      case x `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      f (GHC.Types.F# dt)
+        (f (GHC.Types.F# dt1)
+           (f (GHC.Types.F# dt2)
+              (f (GHC.Types.F# dt3)
+                 (f (GHC.Types.F# dt4)
+                    (f (GHC.Types.F# dt5)
+                       (f (GHC.Types.F# dt6)
+                          (f (GHC.Types.F# dt7)
+                             (f (GHC.Types.F# dt8)
+                                (f (GHC.Types.F# dt9)
+                                   (f (GHC.Types.F# dt10)
+                                      (f (GHC.Types.F# dt11)
+                                         (f (GHC.Types.F# dt12)
+                                            (f (GHC.Types.F# dt13)
+                                               (f (GHC.Types.F# dt14)
+                                                  (f (GHC.Types.F# dt15)
+                                                     (f (GHC.Types.F# dt16)
+                                                        (f (GHC.Types.F# dt17)
+                                                           (f (GHC.Types.F# dt18)
+                                                              (f (GHC.Types.F# dt19)
+                                                                 (f (GHC.Types.F# dt20)
+                                                                    (f (GHC.Types.F# dt21)
+                                                                       (f (GHC.Types.F# dt22)
+                                                                          (f (GHC.Types.F# dt23)
+                                                                             z)))))))))))))))))))))))
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ofoldr.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Ofoldr.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Ofoldr.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ofoldr.$trModule2 = "CoreDump.Tensor.Ofoldr"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Ofoldr.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Ofoldr.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Ofoldr.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Ofoldr.$trModule3 CoreDump.Tensor.Ofoldr.$trModule1
+
+

@@ -1,0 +1,96 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:52:11.1848071 UTC
+
+Result size of Tidy Core
+  = {terms: 105, types: 97, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.MapSubtensorElems.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.MapSubtensorElems.$trModule2
+  = "CoreDump.Tensor.MapSubtensorElems"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.MapSubtensorElems.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.MapSubtensorElems.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.MapSubtensorElems.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.MapSubtensorElems.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.MapSubtensorElems.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.MapSubtensorElems.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.MapSubtensorElems.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.MapSubtensorElems.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.MapSubtensorElems.$trModule :: GHC.Types.Module
+CoreDump.Tensor.MapSubtensorElems.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.MapSubtensorElems.$trModule3
+      CoreDump.Tensor.MapSubtensorElems.$trModule1
+
+-- RHS size: {terms: 90, types: 64, coercions: 3, joins: 0/0}
+mapSubtensorElems_
+  :: Tensor '[2, 3, 4] Float
+     -> (Float -> Float) -> Tensor '[2, 3, 4] Float
+mapSubtensorElems_
+  = \ (t :: Tensor '[2, 3, 4] Float) (f :: Float -> Float) ->
+      case t `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case f (GHC.Types.F# dt) of { GHC.Types.F# dt30 ->
+      case f (GHC.Types.F# dt1) of { GHC.Types.F# dt32 ->
+      case f (GHC.Types.F# dt2) of { GHC.Types.F# dt34 ->
+      case f (GHC.Types.F# dt3) of { GHC.Types.F# dt36 ->
+      case f (GHC.Types.F# dt4) of { GHC.Types.F# dt38 ->
+      case f (GHC.Types.F# dt5) of { GHC.Types.F# dt40 ->
+      case f (GHC.Types.F# dt6) of { GHC.Types.F# dt42 ->
+      case f (GHC.Types.F# dt7) of { GHC.Types.F# dt44 ->
+      case f (GHC.Types.F# dt8) of { GHC.Types.F# dt46 ->
+      case f (GHC.Types.F# dt9) of { GHC.Types.F# dt48 ->
+      case f (GHC.Types.F# dt10) of { GHC.Types.F# dt50 ->
+      case f (GHC.Types.F# dt11) of { GHC.Types.F# dt52 ->
+      (TensorInstances.Tensor'2'3'4'Float
+         dt30
+         dt32
+         dt34
+         dt36
+         dt38
+         dt40
+         dt42
+         dt44
+         dt46
+         dt48
+         dt50
+         dt52
+         dt12
+         dt13
+         dt14
+         dt15
+         dt16
+         dt17
+         dt18
+         dt19
+         dt20
+         dt21
+         dt22
+         dt23)
+      `cast` <Co:2>
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+      }
+
+

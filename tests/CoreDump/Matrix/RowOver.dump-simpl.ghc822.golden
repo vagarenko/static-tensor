@@ -1,0 +1,54 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:55:30.0301804 UTC
+
+Result size of Tidy Core
+  = {terms: 40, types: 46, coercions: 6, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.RowOver.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.RowOver.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.RowOver.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.RowOver.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.RowOver.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.RowOver.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.RowOver.$trModule2 = "CoreDump.Matrix.RowOver"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.RowOver.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.RowOver.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.RowOver.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.RowOver.$trModule :: GHC.Types.Module
+CoreDump.Matrix.RowOver.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.RowOver.$trModule3
+      CoreDump.Matrix.RowOver.$trModule1
+
+-- RHS size: {terms: 25, types: 27, coercions: 6, joins: 0/0}
+rowOver_
+  :: (Vector 3 Float -> Vector 3 Float)
+     -> Matrix 4 3 Float -> Matrix 4 3 Float
+rowOver_
+  = \ (f :: Vector 3 Float -> Vector 3 Float)
+      (eta :: Matrix 4 3 Float) ->
+      case eta `cast` <Co:1> of
+      { TensorInstances.Tensor'4'3'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 ->
+      case (f ((TensorInstances.Tensor'3'Float dt6 dt7 dt8)
+               `cast` <Co:2>))
+           `cast` <Co:1>
+      of
+      { TensorInstances.Tensor'3'Float dt16 dt17 dt18 ->
+      (TensorInstances.Tensor'4'3'Float
+         dt dt1 dt2 dt3 dt4 dt5 dt16 dt17 dt18 dt9 dt10 dt11)
+      `cast` <Co:2>
+      }
+      }
+
+

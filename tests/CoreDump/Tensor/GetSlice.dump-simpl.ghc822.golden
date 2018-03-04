@@ -1,0 +1,46 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:51:41.5441117 UTC
+
+Result size of Tidy Core
+  = {terms: 28, types: 69, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GetSlice.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.GetSlice.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GetSlice.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.GetSlice.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.GetSlice.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GetSlice.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.GetSlice.$trModule2 = "CoreDump.Tensor.GetSlice"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GetSlice.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.GetSlice.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.GetSlice.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GetSlice.$trModule :: GHC.Types.Module
+CoreDump.Tensor.GetSlice.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.GetSlice.$trModule3
+      CoreDump.Tensor.GetSlice.$trModule1
+
+-- RHS size: {terms: 13, types: 38, coercions: 3, joins: 0/0}
+getSlice_ :: Tensor '[2, 3, 4] Float -> Tensor '[2, 2, 2] Float
+getSlice_
+  = \ (x :: Tensor '[2, 3, 4] Float) ->
+      case x `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      (TensorInstances.Tensor'2'2'2'Float
+         dt dt1 dt4 dt5 dt12 dt13 dt16 dt17)
+      `cast` <Co:2>
+      }
+
+

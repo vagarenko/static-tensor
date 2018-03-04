@@ -26,7 +26,7 @@ extra-source-files:
         , tests/CoreDump/Matrix/*.dump-simpl.ghc821.golden
 
 cabal-version:       >= 1.10
-tested-with:         GHC == 8.2.1
+tested-with:         GHC >= 8.2.1 && <= 8.2.2
 
 source-repository head
         type:     git
@@ -90,5 +90,5 @@ test-suite coreDump
         , tasty              == 0.11.2.*
         , tasty-golden       == 2.3.*
         , text               == 1.2.*
-        , typed-process      == 0.1.*
+        , typed-process      == 0.2.*
         , Diff               == 0.3.*

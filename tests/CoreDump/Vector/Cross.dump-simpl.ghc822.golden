@@ -1,0 +1,51 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:54:47.1267264 UTC
+
+Result size of Tidy Core
+  = {terms: 45, types: 28, coercions: 4, joins: 0/0}
+
+-- RHS size: {terms: 30, types: 14, coercions: 4, joins: 0/0}
+cross_ :: Vector 3 Float -> Vector 3 Float -> Vector 3 Float
+cross_
+  = \ (v0 :: Vector 3 Float) (v1 :: Vector 3 Float) ->
+      case v0 `cast` <Co:1> of
+      { TensorInstances.Tensor'3'Float dt dt1 dt2 ->
+      case v1 `cast` <Co:1> of
+      { TensorInstances.Tensor'3'Float dt4 dt5 dt6 ->
+      (TensorInstances.Tensor'3'Float
+         (GHC.Prim.minusFloat#
+            (GHC.Prim.timesFloat# dt1 dt6) (GHC.Prim.timesFloat# dt2 dt5))
+         (GHC.Prim.minusFloat#
+            (GHC.Prim.timesFloat# dt2 dt4) (GHC.Prim.timesFloat# dt dt6))
+         (GHC.Prim.minusFloat#
+            (GHC.Prim.timesFloat# dt dt5) (GHC.Prim.timesFloat# dt1 dt4)))
+      `cast` <Co:2>
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Cross.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Vector.Cross.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Cross.$trModule3 :: GHC.Types.TrName
+CoreDump.Vector.Cross.$trModule3
+  = GHC.Types.TrNameS CoreDump.Vector.Cross.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Cross.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Vector.Cross.$trModule2 = "CoreDump.Vector.Cross"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Cross.$trModule1 :: GHC.Types.TrName
+CoreDump.Vector.Cross.$trModule1
+  = GHC.Types.TrNameS CoreDump.Vector.Cross.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Cross.$trModule :: GHC.Types.Module
+CoreDump.Vector.Cross.$trModule
+  = GHC.Types.Module
+      CoreDump.Vector.Cross.$trModule3 CoreDump.Vector.Cross.$trModule1
+
+

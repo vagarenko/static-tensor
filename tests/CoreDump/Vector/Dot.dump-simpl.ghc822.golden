@@ -1,0 +1,57 @@
+
+==================== Tidy Core ====================
+2018-03-04 18:54:52.923058 UTC
+
+Result size of Tidy Core
+  = {terms: 41, types: 38, coercions: 68, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Dot.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Vector.Dot.$trModule2 = "CoreDump.Vector.Dot"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Dot.$trModule1 :: GHC.Types.TrName
+CoreDump.Vector.Dot.$trModule1
+  = GHC.Types.TrNameS CoreDump.Vector.Dot.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Dot.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Vector.Dot.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Dot.$trModule3 :: GHC.Types.TrName
+CoreDump.Vector.Dot.$trModule3
+  = GHC.Types.TrNameS CoreDump.Vector.Dot.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Vector.Dot.$trModule :: GHC.Types.Module
+CoreDump.Vector.Dot.$trModule
+  = GHC.Types.Module
+      CoreDump.Vector.Dot.$trModule3 CoreDump.Vector.Dot.$trModule1
+
+-- RHS size: {terms: 24, types: 16, coercions: 52, joins: 0/0}
+$sdot1
+  :: Vector 4 Float
+     -> Vector 4 Float -> Data.MonoTraversable.Element (Vector 4 Float)
+$sdot1
+  = \ (v1 :: Vector 4 Float) (v2 :: Vector 4 Float) ->
+      case v1 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'Float dt dt1 dt2 dt3 ->
+      case v2 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'Float dt4 dt5 dt6 dt7 ->
+      (GHC.Types.F#
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt3 dt7) (GHC.Prim.timesFloat# dt2 dt6))
+               (GHC.Prim.timesFloat# dt1 dt5))
+            (GHC.Prim.timesFloat# dt dt4)))
+      `cast` <Co:50>
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 16, joins: 0/0}
+dot_ :: Vector 4 Float -> Vector 4 Float -> Float
+dot_ = $sdot1 `cast` <Co:16>
+
+

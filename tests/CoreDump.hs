@@ -113,7 +113,7 @@ testCoreDump :: String -> TestTree
 testCoreDump name =
     goldenTest
         name
-        (T.readFile $ name ++ ".dump-simpl.ghc821.golden")
+        (T.readFile $ name ++ ".dump-simpl.ghc822.golden")
         (mkCoreDump $ name)
         cmp
         (const $ pure ())
