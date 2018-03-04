@@ -21,9 +21,9 @@ extra-source-files:
         , tests/CoreDump/Tensor/*.hs
         , tests/CoreDump/Vector/*.hs
         , tests/CoreDump/Matrix/*.hs
-        , tests/CoreDump/Tensor/*.dump-simpl.ghc821.golden
-        , tests/CoreDump/Vector/*.dump-simpl.ghc821.golden
-        , tests/CoreDump/Matrix/*.dump-simpl.ghc821.golden
+        , tests/CoreDump/Tensor/*.dump-simpl.ghc822.golden
+        , tests/CoreDump/Vector/*.dump-simpl.ghc822.golden
+        , tests/CoreDump/Matrix/*.dump-simpl.ghc822.golden
 
 cabal-version:       >= 1.10
 tested-with:         GHC >= 8.2.1 && <= 8.2.2
