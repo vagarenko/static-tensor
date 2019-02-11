@@ -6,11 +6,7 @@
 {-# LANGUAGE TypeOperators           #-}
 {-# LANGUAGE FlexibleInstances       #-}
 {-# LANGUAGE FlexibleContexts        #-}           
-{-# LANGUAGE ScopedTypeVariables     #-}
-{-# LANGUAGE DeriveGeneric           #-}
-{-# LANGUAGE DeriveAnyClass          #-}
-{-# LANGUAGE TemplateHaskell         #-}
-{-# LANGUAGE StandaloneDeriving      #-}           
+{-# LANGUAGE ScopedTypeVariables     #-}          
 {-# LANGUAGE UndecidableInstances    #-}
 {-# LANGUAGE TypeApplications        #-}
 {-# LANGUAGE TypeInType              #-}
@@ -21,6 +17,8 @@
 {-# LANGUAGE UndecidableSuperClasses #-}
 {-# LANGUAGE RankNTypes              #-}
 {-# LANGUAGE InstanceSigs            #-}
+{-# LANGUAGE NoStarIsType            #-}
+{-# LANGUAGE BangPatterns            #-}
 
 -----------------------------------------------------------------------------
 -- |
