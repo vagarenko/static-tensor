@@ -1,7 +1,7 @@
 name:                static-tensor
 version:             0.2.1.0
 synopsis:            Tensors of statically known size
-description:         
+description:
     This library provides a toolkit for working with tensors of statically known size and element's type.
     See README.md
 license:             BSD3
@@ -21,9 +21,9 @@ extra-source-files:
         , tests/CoreDump/Tensor/*.hs
         , tests/CoreDump/Vector/*.hs
         , tests/CoreDump/Matrix/*.hs
-        , tests/CoreDump/Tensor/*.dump-simpl.ghc822.golden
-        , tests/CoreDump/Vector/*.dump-simpl.ghc822.golden
-        , tests/CoreDump/Matrix/*.dump-simpl.ghc822.golden
+        , tests/CoreDump/Tensor/*.dump-simpl.*.golden
+        , tests/CoreDump/Vector/*.dump-simpl.*.golden
+        , tests/CoreDump/Matrix/*.dump-simpl.*.golden
 
 cabal-version:       >= 1.10
 tested-with:         GHC >= 8.2.1 && <= 8.2.2
@@ -34,7 +34,7 @@ source-repository head
 
 library
     exposed-modules:
-          Data.Tensor.Static 
+          Data.Tensor.Static
         , Data.Tensor.Static.TH
         , Data.Matrix.Static
         , Data.Vector.Static
@@ -42,7 +42,7 @@ library
         , Data.List.Unrolled
         , Type.List
 
-    -- other-extensions:    
+    -- other-extensions:
     build-depends:
           base               >= 4.10 && <= 5.0
         , deepseq            >= 1.4.3
@@ -74,7 +74,7 @@ benchmark matMul
         , deepseq            == 1.4.3.*
         , linear             == 1.20.*
         , mwc-random         == 0.13.*
-        , static-tensor      
+        , static-tensor
         , vector             == 0.12.*
 
 test-suite coreDump

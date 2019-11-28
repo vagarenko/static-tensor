@@ -8,6 +8,8 @@
 *.hi
 *.o
 *.exe
+*.dyn_hi
+*.dyn_o
 /.stack-work
 /.vscode
 /dist-newstyle
