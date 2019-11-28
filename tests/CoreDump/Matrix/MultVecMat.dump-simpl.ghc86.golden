@@ -1,0 +1,81 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:29:50.52450503 UTC
+
+Result size of Tidy Core
+  = {terms: 86, types: 87, coercions: 25, joins: 0/0}
+
+-- RHS size: {terms: 69, types: 39, coercions: 11, joins: 0/0}
+CoreDump.Matrix.MultVecMat.multVecMat_1
+  :: Data.Tensor.Static.Tensor '[4] Float
+     -> Data.Tensor.Static.Tensor '[4, 4] Float
+     -> Data.Tensor.Static.Tensor (MatrixMultDims '[4] '[4, 4]) Float
+CoreDump.Matrix.MultVecMat.multVecMat_1
+  = \ (v :: Data.Tensor.Static.Tensor '[4] Float)
+      (m1 :: Data.Tensor.Static.Tensor '[4, 4] Float) ->
+      case v `cast` <Co:1> of
+      { TensorInstances.Tensor'4'Float dt dt1 dt2 dt3 ->
+      case m1 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float dt4 dt5 dt6 dt7 dt8 dt9 dt10
+                                         dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19 ->
+      (TensorInstances.Tensor'4'Float
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt4)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt8)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt12) (GHC.Prim.timesFloat# dt3 dt16))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt5)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt9)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt13) (GHC.Prim.timesFloat# dt3 dt17))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt6)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt10)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt14) (GHC.Prim.timesFloat# dt3 dt18))))
+         (GHC.Prim.plusFloat#
+            (GHC.Prim.timesFloat# dt dt7)
+            (GHC.Prim.plusFloat#
+               (GHC.Prim.timesFloat# dt1 dt11)
+               (GHC.Prim.plusFloat#
+                  (GHC.Prim.timesFloat# dt2 dt15) (GHC.Prim.timesFloat# dt3 dt19)))))
+      `cast` <Co:9>
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 14, joins: 0/0}
+multVecMat_ :: Vector 4 Float -> Matrix 4 4 Float -> Vector 4 Float
+multVecMat_
+  = CoreDump.Matrix.MultVecMat.multVecMat_1 `cast` <Co:14>
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultVecMat.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.MultVecMat.$trModule2
+  = "CoreDump.Matrix.MultVecMat"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultVecMat.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.MultVecMat.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.MultVecMat.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultVecMat.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.MultVecMat.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultVecMat.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.MultVecMat.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.MultVecMat.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.MultVecMat.$trModule :: GHC.Types.Module
+CoreDump.Matrix.MultVecMat.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.MultVecMat.$trModule3
+      CoreDump.Matrix.MultVecMat.$trModule1
+
+

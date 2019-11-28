@@ -1,0 +1,59 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:29:00.696552608 UTC
+
+Result size of Tidy Core
+  = {terms: 34, types: 10, coercions: 2, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Identity.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.Identity.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Identity.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.Identity.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.Identity.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Identity.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.Identity.$trModule2 = "CoreDump.Matrix.Identity"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Identity.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.Identity.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.Identity.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Identity.$trModule :: GHC.Types.Module
+CoreDump.Matrix.Identity.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.Identity.$trModule3
+      CoreDump.Matrix.Identity.$trModule1
+
+-- RHS size: {terms: 17, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Identity.identity_1
+  :: TensorInstances.R:Tensor:Float13
+CoreDump.Matrix.Identity.identity_1
+  = TensorInstances.Tensor'4'4'Float
+      1.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      1.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      1.0#
+      0.0#
+      0.0#
+      0.0#
+      0.0#
+      1.0#
+
+-- RHS size: {terms: 1, types: 0, coercions: 2, joins: 0/0}
+identity_ :: Matrix 4 4 Float
+identity_ = CoreDump.Matrix.Identity.identity_1 `cast` <Co:2>
+
+

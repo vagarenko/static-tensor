@@ -1,0 +1,51 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:28:41.171165776 UTC
+
+Result size of Tidy Core
+  = {terms: 23, types: 74, coercions: 27, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.TensorElemView.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.TensorElemView.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.TensorElemView.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.TensorElemView.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.TensorElemView.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.TensorElemView.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.TensorElemView.$trModule2
+  = "CoreDump.Tensor.TensorElemView"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.TensorElemView.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.TensorElemView.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.TensorElemView.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.TensorElemView.$trModule :: GHC.Types.Module
+CoreDump.Tensor.TensorElemView.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.TensorElemView.$trModule3
+      CoreDump.Tensor.TensorElemView.$trModule1
+
+-- RHS size: {terms: 6, types: 38, coercions: 8, joins: 0/0}
+CoreDump.Tensor.TensorElemView.tensorElemView_1
+  :: Tensor '[2, 3, 4] Float -> Tensor '[] Float
+CoreDump.Tensor.TensorElemView.tensorElemView_1
+  = \ (s1 :: Tensor '[2, 3, 4] Float) ->
+      case s1 `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      (GHC.Types.F# dt17) `cast` <Co:7>
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 19, joins: 0/0}
+tensorElemView_ :: Tensor '[2, 3, 4] Float -> Float
+tensorElemView_
+  = CoreDump.Tensor.TensorElemView.tensorElemView_1 `cast` <Co:19>
+
+

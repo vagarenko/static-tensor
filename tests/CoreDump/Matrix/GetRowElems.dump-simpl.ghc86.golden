@@ -1,0 +1,53 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:29:12.007532682 UTC
+
+Result size of Tidy Core
+  = {terms: 32, types: 37, coercions: 1, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.GetRowElems.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.GetRowElems.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.GetRowElems.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.GetRowElems.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.GetRowElems.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.GetRowElems.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.GetRowElems.$trModule2
+  = "CoreDump.Matrix.GetRowElems"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.GetRowElems.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.GetRowElems.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.GetRowElems.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.GetRowElems.$trModule :: GHC.Types.Module
+CoreDump.Matrix.GetRowElems.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.GetRowElems.$trModule3
+      CoreDump.Matrix.GetRowElems.$trModule1
+
+-- RHS size: {terms: 17, types: 26, coercions: 1, joins: 0/0}
+getRowElems_ :: Matrix 4 4 Float -> [Float]
+getRowElems_
+  = \ (w :: Matrix 4 4 Float) ->
+      case w `cast` <Co:1> of
+      { TensorInstances.Tensor'4'4'Float ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8
+                                         ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ->
+      GHC.Types.:
+        @ Float
+        (GHC.Types.F# ww13)
+        (GHC.Types.:
+           @ Float
+           (GHC.Types.F# ww14)
+           (GHC.Types.:
+              @ Float
+              (GHC.Types.F# ww15)
+              (GHC.Types.: @ Float (GHC.Types.F# ww16) (GHC.Types.[] @ Float))))
+      }
+
+

@@ -1,0 +1,130 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:27:47.069911101 UTC
+
+Result size of Tidy Core
+  = {terms: 168, types: 234, coercions: 2, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ozip.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ozip.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ozip.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Ozip.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Ozip.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ozip.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ozip.$trModule2 = "CoreDump.Tensor.Ozip"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ozip.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Ozip.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Ozip.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ozip.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Ozip.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Ozip.$trModule3 CoreDump.Tensor.Ozip.$trModule1
+
+-- RHS size: {terms: 153, types: 199, coercions: 2, joins: 0/0}
+ozip_
+  :: Tensor '[2, 3, 4] Float
+     -> Tensor '[2, 3, 4] Float -> [(Float, Float)]
+ozip_
+  = \ (a :: Tensor '[2, 3, 4] Float)
+      (b :: Tensor '[2, 3, 4] Float) ->
+      case a `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case b `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt29 dt30 dt31 dt32 dt33 dt34
+                                           dt35 dt36 dt37 dt38 dt39 dt40 dt41 dt42 dt43 dt44 dt45
+                                           dt46 dt47 dt48 dt49 dt50 dt51 dt52 ->
+      GHC.Types.:
+        @ (Float, Float)
+        (GHC.Types.F# dt, GHC.Types.F# dt29)
+        (GHC.Types.:
+           @ (Float, Float)
+           (GHC.Types.F# dt1, GHC.Types.F# dt30)
+           (GHC.Types.:
+              @ (Float, Float)
+              (GHC.Types.F# dt2, GHC.Types.F# dt31)
+              (GHC.Types.:
+                 @ (Float, Float)
+                 (GHC.Types.F# dt3, GHC.Types.F# dt32)
+                 (GHC.Types.:
+                    @ (Float, Float)
+                    (GHC.Types.F# dt4, GHC.Types.F# dt33)
+                    (GHC.Types.:
+                       @ (Float, Float)
+                       (GHC.Types.F# dt5, GHC.Types.F# dt34)
+                       (GHC.Types.:
+                          @ (Float, Float)
+                          (GHC.Types.F# dt6, GHC.Types.F# dt35)
+                          (GHC.Types.:
+                             @ (Float, Float)
+                             (GHC.Types.F# dt7, GHC.Types.F# dt36)
+                             (GHC.Types.:
+                                @ (Float, Float)
+                                (GHC.Types.F# dt8, GHC.Types.F# dt37)
+                                (GHC.Types.:
+                                   @ (Float, Float)
+                                   (GHC.Types.F# dt9, GHC.Types.F# dt38)
+                                   (GHC.Types.:
+                                      @ (Float, Float)
+                                      (GHC.Types.F# dt10, GHC.Types.F# dt39)
+                                      (GHC.Types.:
+                                         @ (Float, Float)
+                                         (GHC.Types.F# dt11, GHC.Types.F# dt40)
+                                         (GHC.Types.:
+                                            @ (Float, Float)
+                                            (GHC.Types.F# dt12, GHC.Types.F# dt41)
+                                            (GHC.Types.:
+                                               @ (Float, Float)
+                                               (GHC.Types.F# dt13, GHC.Types.F# dt42)
+                                               (GHC.Types.:
+                                                  @ (Float, Float)
+                                                  (GHC.Types.F# dt14, GHC.Types.F# dt43)
+                                                  (GHC.Types.:
+                                                     @ (Float, Float)
+                                                     (GHC.Types.F# dt15, GHC.Types.F# dt44)
+                                                     (GHC.Types.:
+                                                        @ (Float, Float)
+                                                        (GHC.Types.F# dt16, GHC.Types.F# dt45)
+                                                        (GHC.Types.:
+                                                           @ (Float, Float)
+                                                           (GHC.Types.F# dt17, GHC.Types.F# dt46)
+                                                           (GHC.Types.:
+                                                              @ (Float, Float)
+                                                              (GHC.Types.F# dt18, GHC.Types.F# dt47)
+                                                              (GHC.Types.:
+                                                                 @ (Float, Float)
+                                                                 (GHC.Types.F# dt19,
+                                                                  GHC.Types.F# dt48)
+                                                                 (GHC.Types.:
+                                                                    @ (Float, Float)
+                                                                    (GHC.Types.F# dt20,
+                                                                     GHC.Types.F# dt49)
+                                                                    (GHC.Types.:
+                                                                       @ (Float, Float)
+                                                                       (GHC.Types.F# dt21,
+                                                                        GHC.Types.F# dt50)
+                                                                       (GHC.Types.:
+                                                                          @ (Float, Float)
+                                                                          (GHC.Types.F# dt22,
+                                                                           GHC.Types.F# dt51)
+                                                                          (GHC.Types.:
+                                                                             @ (Float, Float)
+                                                                             (GHC.Types.F# dt23,
+                                                                              GHC.Types.F# dt52)
+                                                                             (GHC.Types.[]
+                                                                                @ (Float,
+                                                                                   Float)))))))))))))))))))))))))
+      }
+      }
+
+

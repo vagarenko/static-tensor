@@ -1,0 +1,70 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:27:38.598925635 UTC
+
+Result size of Tidy Core
+  = {terms: 91, types: 63, coercions: 1, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr1Ex.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ofoldr1Ex.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr1Ex.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Ofoldr1Ex.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Ofoldr1Ex.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr1Ex.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Ofoldr1Ex.$trModule2 = "CoreDump.Tensor.Ofoldr1Ex"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr1Ex.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Ofoldr1Ex.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Ofoldr1Ex.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Ofoldr1Ex.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Ofoldr1Ex.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Ofoldr1Ex.$trModule3
+      CoreDump.Tensor.Ofoldr1Ex.$trModule1
+
+-- RHS size: {terms: 76, types: 41, coercions: 1, joins: 0/0}
+ofoldr1Ex_
+  :: (Float -> Float -> Float) -> Tensor '[2, 3, 4] Float -> Float
+ofoldr1Ex_
+  = \ (f :: Float -> Float -> Float)
+      (x :: Tensor '[2, 3, 4] Float) ->
+      case x `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      f (GHC.Types.F# dt)
+        (f (GHC.Types.F# dt1)
+           (f (GHC.Types.F# dt2)
+              (f (GHC.Types.F# dt3)
+                 (f (GHC.Types.F# dt4)
+                    (f (GHC.Types.F# dt5)
+                       (f (GHC.Types.F# dt6)
+                          (f (GHC.Types.F# dt7)
+                             (f (GHC.Types.F# dt8)
+                                (f (GHC.Types.F# dt9)
+                                   (f (GHC.Types.F# dt10)
+                                      (f (GHC.Types.F# dt11)
+                                         (f (GHC.Types.F# dt12)
+                                            (f (GHC.Types.F# dt13)
+                                               (f (GHC.Types.F# dt14)
+                                                  (f (GHC.Types.F# dt15)
+                                                     (f (GHC.Types.F# dt16)
+                                                        (f (GHC.Types.F# dt17)
+                                                           (f (GHC.Types.F# dt18)
+                                                              (f (GHC.Types.F# dt19)
+                                                                 (f (GHC.Types.F# dt20)
+                                                                    (f (GHC.Types.F# dt21)
+                                                                       (f (GHC.Types.F# dt22)
+                                                                          (GHC.Types.F#
+                                                                             dt23)))))))))))))))))))))))
+      }
+
+

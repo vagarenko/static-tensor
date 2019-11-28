@@ -1,0 +1,76 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:26:48.232793473 UTC
+
+Result size of Tidy Core
+  = {terms: 96, types: 120, coercions: 4, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Diff.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.Diff.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Diff.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.Diff.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.Diff.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Diff.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.Diff.$trModule2 = "CoreDump.Tensor.Diff"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Diff.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.Diff.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.Diff.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.Diff.$trModule :: GHC.Types.Module
+CoreDump.Tensor.Diff.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.Diff.$trModule3 CoreDump.Tensor.Diff.$trModule1
+
+-- RHS size: {terms: 81, types: 76, coercions: 4, joins: 0/0}
+diff_
+  :: Tensor '[2, 3, 4] Float
+     -> Tensor '[2, 3, 4] Float -> Tensor '[2, 3, 4] Float
+diff_
+  = \ (t1 :: Tensor '[2, 3, 4] Float)
+      (t2 :: Tensor '[2, 3, 4] Float) ->
+      case t1 `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                           dt8 dt9 dt10 dt11 dt12 dt13 dt14 dt15 dt16 dt17 dt18 dt19
+                                           dt20 dt21 dt22 dt23 ->
+      case t2 `cast` <Co:1> of
+      { TensorInstances.Tensor'2'3'4'Float dt29 dt30 dt31 dt32 dt33 dt34
+                                           dt35 dt36 dt37 dt38 dt39 dt40 dt41 dt42 dt43 dt44 dt45
+                                           dt46 dt47 dt48 dt49 dt50 dt51 dt52 ->
+      (TensorInstances.Tensor'2'3'4'Float
+         (GHC.Prim.minusFloat# dt dt29)
+         (GHC.Prim.minusFloat# dt1 dt30)
+         (GHC.Prim.minusFloat# dt2 dt31)
+         (GHC.Prim.minusFloat# dt3 dt32)
+         (GHC.Prim.minusFloat# dt4 dt33)
+         (GHC.Prim.minusFloat# dt5 dt34)
+         (GHC.Prim.minusFloat# dt6 dt35)
+         (GHC.Prim.minusFloat# dt7 dt36)
+         (GHC.Prim.minusFloat# dt8 dt37)
+         (GHC.Prim.minusFloat# dt9 dt38)
+         (GHC.Prim.minusFloat# dt10 dt39)
+         (GHC.Prim.minusFloat# dt11 dt40)
+         (GHC.Prim.minusFloat# dt12 dt41)
+         (GHC.Prim.minusFloat# dt13 dt42)
+         (GHC.Prim.minusFloat# dt14 dt43)
+         (GHC.Prim.minusFloat# dt15 dt44)
+         (GHC.Prim.minusFloat# dt16 dt45)
+         (GHC.Prim.minusFloat# dt17 dt46)
+         (GHC.Prim.minusFloat# dt18 dt47)
+         (GHC.Prim.minusFloat# dt19 dt48)
+         (GHC.Prim.minusFloat# dt20 dt49)
+         (GHC.Prim.minusFloat# dt21 dt50)
+         (GHC.Prim.minusFloat# dt22 dt51)
+         (GHC.Prim.minusFloat# dt23 dt52))
+      `cast` <Co:2>
+      }
+      }
+
+

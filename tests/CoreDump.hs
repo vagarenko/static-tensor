@@ -5,6 +5,8 @@ module Main where
 
 import Data.Algorithm.Diff
 import Data.Text                    (Text)
+import Data.Version                 (versionBranch)
+import System.Info                  (compilerName, compilerVersion)
 import System.Exit
 import System.Process.Typed
 import Test.Tasty
@@ -109,15 +111,23 @@ tests =
     where
         testFilesInDir dir = map (\f -> testCoreDump $ dir ++ f)
 
+goldenFilePostfix :: String
+goldenFilePostfix = ".dump-simpl." ++ compilerIdentifier ++ ".golden"
+  where
+    compilerIdentifier = compilerName ++ compilerVersionIdentifier  -- ghc822
+    compilerVersionIdentifier = concatMap show $ versionBranch compilerVersion  -- 822
+
 testCoreDump :: String -> TestTree
 testCoreDump name =
     goldenTest
         name
-        (T.readFile $ name ++ ".dump-simpl.ghc822.golden")
-        (mkCoreDump $ name)
+        (T.readFile goldenFileName)
+        (mkCoreDump name)
         cmp
-        (const $ pure ())
+        (T.writeFile goldenFileName)
     where
+        goldenFileName = name ++ goldenFilePostfix
+
         cmp golden new = pure $
             if ng == nn
                 then Nothing

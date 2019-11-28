@@ -1,0 +1,45 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:29:39.877124917 UTC
+
+Result size of Tidy Core
+  = {terms: 32, types: 30, coercions: 3, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Transpose.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Matrix.Transpose.$trModule2 = "CoreDump.Matrix.Transpose"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Transpose.$trModule1 :: GHC.Types.TrName
+CoreDump.Matrix.Transpose.$trModule1
+  = GHC.Types.TrNameS CoreDump.Matrix.Transpose.$trModule2
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Transpose.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Matrix.Transpose.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Transpose.$trModule3 :: GHC.Types.TrName
+CoreDump.Matrix.Transpose.$trModule3
+  = GHC.Types.TrNameS CoreDump.Matrix.Transpose.$trModule4
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Matrix.Transpose.$trModule :: GHC.Types.Module
+CoreDump.Matrix.Transpose.$trModule
+  = GHC.Types.Module
+      CoreDump.Matrix.Transpose.$trModule3
+      CoreDump.Matrix.Transpose.$trModule1
+
+-- RHS size: {terms: 17, types: 17, coercions: 3, joins: 0/0}
+transpose_ :: Matrix 4 3 Float -> Matrix 3 4 Float
+transpose_
+  = \ (m1 :: Matrix 4 3 Float) ->
+      case m1 `cast` <Co:1> of
+      { TensorInstances.Tensor'4'3'Float dt dt1 dt2 dt3 dt4 dt5 dt6 dt7
+                                         dt8 dt9 dt10 dt11 ->
+      (TensorInstances.Tensor'3'4'Float
+         dt dt3 dt6 dt9 dt1 dt4 dt7 dt10 dt2 dt5 dt8 dt11)
+      `cast` <Co:2>
+      }
+
+

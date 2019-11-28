@@ -1,0 +1,70 @@
+
+==================== Tidy Core ====================
+2019-11-28 18:27:02.077729949 UTC
+
+Result size of Tidy Core
+  = {terms: 42, types: 19, coercions: 2, joins: 0/0}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GenerateKnownNats.$trModule4 :: GHC.Prim.Addr#
+CoreDump.Tensor.GenerateKnownNats.$trModule4 = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GenerateKnownNats.$trModule3 :: GHC.Types.TrName
+CoreDump.Tensor.GenerateKnownNats.$trModule3
+  = GHC.Types.TrNameS CoreDump.Tensor.GenerateKnownNats.$trModule4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GenerateKnownNats.$trModule2 :: GHC.Prim.Addr#
+CoreDump.Tensor.GenerateKnownNats.$trModule2
+  = "CoreDump.Tensor.GenerateKnownNats"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GenerateKnownNats.$trModule1 :: GHC.Types.TrName
+CoreDump.Tensor.GenerateKnownNats.$trModule1
+  = GHC.Types.TrNameS CoreDump.Tensor.GenerateKnownNats.$trModule2
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GenerateKnownNats.$trModule :: GHC.Types.Module
+CoreDump.Tensor.GenerateKnownNats.$trModule
+  = GHC.Types.Module
+      CoreDump.Tensor.GenerateKnownNats.$trModule3
+      CoreDump.Tensor.GenerateKnownNats.$trModule1
+
+-- RHS size: {terms: 25, types: 0, coercions: 0, joins: 0/0}
+CoreDump.Tensor.GenerateKnownNats.generateKnownNats_1
+  :: TensorInstances.R:Tensor:Float27
+CoreDump.Tensor.GenerateKnownNats.generateKnownNats_1
+  = TensorInstances.Tensor'2'3'4'Float
+      0.0#
+      1.0#
+      2.0#
+      3.0#
+      4.0#
+      5.0#
+      6.0#
+      7.0#
+      8.0#
+      9.0#
+      10.0#
+      11.0#
+      12.0#
+      13.0#
+      14.0#
+      15.0#
+      16.0#
+      17.0#
+      18.0#
+      19.0#
+      20.0#
+      21.0#
+      22.0#
+      23.0#
+
+-- RHS size: {terms: 1, types: 0, coercions: 2, joins: 0/0}
+generateKnownNats_ :: Tensor '[2, 3, 4] Float
+generateKnownNats_
+  = CoreDump.Tensor.GenerateKnownNats.generateKnownNats_1
+    `cast` <Co:2>
+
+

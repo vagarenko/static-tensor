@@ -87,8 +87,8 @@ test-suite coreDump
   build-depends:
           base               >= 4.10 && <= 5.0
         , static-tensor
-        , tasty              == 0.11.2.*
-        , tasty-golden       == 2.3.*
-        , text               == 1.2.*
-        , typed-process      == 0.2.*
-        , Diff               == 0.3.*
+        , tasty              >= 0.11
+        , tasty-golden       >= 2.3
+        , text               >= 1.2
+        , typed-process      >= 0.2
+        , Diff               >= 0.3
