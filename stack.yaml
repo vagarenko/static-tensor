@@ -1,7 +1,7 @@
+resolver: nightly-2023-01-08 # ghc-9.4.4
 packages:
-- location: .
+- '.'
 flags: {}
 extra-package-dbs: []
-resolver: nightly-2018-12-17 # Last GHC 8.6.2
 allow-newer: true
 extra-deps: []

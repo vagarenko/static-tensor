@@ -90,7 +90,7 @@ import Data.Singletons          (type (~>))
 import Data.Singletons.TH       (genDefunSymbols)
 import Data.Tensor.Static       ( IsTensor(..), Tensor, TensorConstructor, NormalizeDims
                                 , generate, Generate
-                                , subtensor, SubtensorCtx, getSubtensorElems, GetSubtensorElems, setSubtensorElems, SetSubtensorElems
+                                , getSubtensorElems, GetSubtensorElems, setSubtensorElems, SetSubtensorElems
                                 , mapSubtensorElems, MapSubtensorElems
                                 , slice, Slice, getSliceElems, GetSliceElems, setSliceElems, SetSliceElems
                                 , mapSliceElems, MapSliceElems
@@ -99,7 +99,7 @@ import Data.Tensor.Static       ( IsTensor(..), Tensor, TensorConstructor, Norma
                                 , scale, Scale)
 import Data.Tensor.Static.TH    (genTensorInstance)
 import Data.Vector.Static       (Vector)
-import GHC.TypeLits             (Nat, type (<=), type (<=?), type (-), type (+), TypeError, ErrorMessage(..))
+import GHC.TypeLits             (Nat, type (<=?), type (-), type (+), TypeError, ErrorMessage(..))
 import Language.Haskell.TH      (Q, Name, Dec)
 import Type.List                (DemoteWith(..))
 
@@ -166,14 +166,14 @@ instance {-# OVERLAPPING #-} (Num e) => IdentityWrk e '[i, i] where
 row :: forall (r :: Nat) (m :: Nat) (n :: Nat) e.
     (Row r m n e)
     => Lens' (Matrix m n e) (Vector n e)    -- ^
-row = subtensor @'[r] @'[m, n] @e
+row = slice @'[r, 0] @'[1, n] @'[m, n] @e
+    -- subtensor @'[r] @'[m, n] @e
 {-# INLINE row #-}
 
 -- | Constraints for 'row' function.
 type Row (r :: Nat) (m :: Nat) (n :: Nat) e =
-    ( SubtensorCtx '[r] '[m, n] e
-    , r <= m - 1                   -- TODO: Why do I need this constraint?
-    , NormalizeDims '[n] ~ '[n]    -- TODO: Why do I need this constraint?
+    ( Slice '[r, 0] '[1, n] '[m, n] e
+    , NormalizeDims '[n] ~ '[n]
     )
 
 -- | List of elements of the row number @r@ of the matrix @m@x@n@.

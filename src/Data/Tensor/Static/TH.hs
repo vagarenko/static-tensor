@@ -40,15 +40,15 @@ genTensorInstance (N.toList -> dimensions) elemTypeName = do
 
     let dataInstDec = DataInstD
             []                       -- context
-            ''Tensor                 -- family name
-            [dims, elemType]         -- family params
+            Nothing
+            (ConT ''Tensor `AppT` dims `AppT` elemType) -- family LHS
             (Just StarT)             -- kind
             [NormalC conName fields] -- data constructor with `fieldCount` unpacked fields of type `elemType`
             []
         
     let fromListPat     = foldr (\name pat -> InfixP (VarP name) '(:) pat) WildP fieldNames
         constructTensor = foldl' (\acc name -> acc `AppE` VarE name) (ConE conName) fieldNames
-        tensorPat       = ConP conName (map VarP fieldNames)
+        tensorPat       = ConP conName [] (map VarP fieldNames)
         toListBody      = ListE (map VarE fieldNames)
         failBody        = VarE 'error `AppE` LitE (StringL ("Not enough elements to build a Tensor of shape "
                                                             ++ show dimensions))

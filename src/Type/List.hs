@@ -9,7 +9,7 @@
 {-# LANGUAGE ScopedTypeVariables     #-}
 {-# LANGUAGE UndecidableInstances    #-}
 {-# LANGUAGE TypeApplications        #-}
-{-# LANGUAGE TypeInType              #-}
+{-# LANGUAGE PolyKinds               #-}
 {-# LANGUAGE AllowAmbiguousTypes     #-}
 {-# LANGUAGE GADTs                   #-}
 {-# LANGUAGE TypeFamilyDependencies  #-}
@@ -17,6 +17,7 @@
 {-# LANGUAGE UndecidableSuperClasses #-}
 {-# LANGUAGE RankNTypes              #-}
 {-# LANGUAGE InstanceSigs            #-}
+{-# LANGUAGE StandaloneKindSignatures #-}
 
 -----------------------------------------------------------------------------
 -- |
@@ -50,7 +51,8 @@ instance (KnownNat n, KnownNats ns) => KnownNats (n ': ns) where
 
 ---------------------------------------------------------------------------------------------------
 -- | Make a constraint for type @x :: kx@ from 'TyFun', or partially applied constraint, or make an empty constraint.
-type family MkCtx (kx :: Type) (kctx :: Type) (ctx :: kctx) (x :: kx) :: Constraint where
+type MkCtx :: forall (kx :: Type) -> forall (kctx :: Type) -> kctx -> kx -> Constraint
+type family MkCtx kx kctx ctx x where
     MkCtx kx (kx ~> Constraint) ctx  x = Apply ctx x
     MkCtx kx (kx -> Constraint) ctx  x = ctx x
     MkCtx _  Constraint         ()   _ = ()
